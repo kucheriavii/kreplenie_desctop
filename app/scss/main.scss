@@ -47,8 +47,296 @@ body {
 b, strong {
 	font-weight: bold;
 }
+a, a:hover, a:active, a:focus{
+	text-decoration: none;
+	color: inherit;
+}
 /***********************************************/
 /*****CUSTOM STYLES******/
 /***********************************************/
+/**********extends************/
+.main-menu{
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	font: 14px "OpenSans-SemiBold", sans-serif;
+	height: 40px;
+	width: 100%;
+	&__item{
+		padding: 0 15px;
+		&:first-child{
+			padding-left: 0;
+		}
+	}
+	&--right{
+		@extend .main-menu;
+		justify-content: flex-end;
+	}
+	&__item--right{
+		@extend .main-menu__item;
+		padding: 0 6px;
+		&:last-child{
+			padding-right: 0;
+			border-left: 2px solid $text;
+		}
+		&:first-child{
+			position: relative;
+			:before{
+				content: "";
+				display: block;
+				background-image: url('../img/profile-icon.png');
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				left: -26px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+.logo-and-contacts{
+	height: 72px;
+	display: flex;
+	align-items: center;
+}
+.logo{
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+.contact-info{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.phones-block{
+	display: block;
+	width: 235px;
+	font: $font-main;
+	list-style-type: none;
+	margin: 0 26px 0 0;
+	padding: 0;
+	position: relative;
+	padding-left: 28px;
+	&:before{
+		content: "";
+		display: block;
+		background-image: url("../img/phone-icon.png");
+		background-repeat: no-repeat;
+		background-position: 0px 5px;
+		height: 100%;
+		width: 16px;
+		position: absolute;
+		left: 0px;
+		align-items: center;
+	}
+	&__item{
+		display: inline-block;
+	}
+}
+.work-time{
+	width: 270px;
+	font: $font-main;
+	margin: 0;
+	padding-left: 16px+20px;
+	position: relative;
+	&:before{
+		content: "";
+		display: block;
+		background-image: url("../img/clock-icon.png");
+		background-repeat: no-repeat;
+		background-position: 0px 5px;
+		height: 100%;
+		width: 16px;
+		position: absolute;
+		left: 0px;
+		align-items: center;
+	}
+}
+.header-menu{
+	background-color: $accent;
+	display: flex;
+}
+.header-menu__wrapper{
+	display: flex;
+	height: 56px;
+	position: relative;
+	width: 100%;
+}
+.drop-menu{
+	display: inline-block;
+	width: 255px;
+	color: $text-white;
+	font: 20px/38px "OpenSans-Bold", sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: $accent;
+	z-index: 2;
+	&.drop-menu--active{
+		display: block;
+		& li{
+			display: block;
+			&:hover{
+				background-color: $active-accent;
+			}
+		}
+	}
+	&__item{
+		display: none;
+		width: 100%;
+		background-color: $accent;
+		padding-left: 21px;
+		line-height: 56px;
+		&.active{
+			letter-spacing: 0.1px;
+			display: block;
+			background-color: $active-accent;
+		}
+		&:first-child:after{
+			content: "";
+			display: inline-block;
+			background: url('../img/arrow-down-icon.png');
+			width: 16px;
+			height: 10px;
+			margin-left: 18px;
+		}
+		&:nth-child(n+2) a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		a{
+			position: relative;
+			z-index: 3;
+			width: 100%;
+		}
+	}
+}
+.search-box{
+	display: flex;
+	margin-left: 0px;
+	//max-height: 56px;
+	align-items: center;
+}
+.search-box__input{
+	width: 575px;
+	height: 40px;
+	display: inline-block;
+	border: none;
+	border-radius: 3px;
+	margin-left: 40px;
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	text-indent: 24px;
+	padding-left: 8px;
+	&::placeholder{
+		background-image: url("../img/search-icon.png");
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		font: 14px "OpenSans-SemiBold", sans-serif;
+		color: #c7c7cc;
 
+	}
+}
+.search-box-button{
+	display: block;
+	border: none;
+	width: 80px;
+	background-color: $active-accent;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	height: 40px;
+	color: #fff;
+	&:hover, &:active, &:focus{
+		outline: 0;
+		cursor: pointer;
+	}
+}
+
+.header-buttons{
+	@extend .menu-ex;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	align-items: center;
+	&__item{
+		width: 65px;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover, &.active{
+			background-color: $active-accent;
+		}
+		.counter{
+			position: absolute;
+			top: -5px;
+			right: -8px;
+			font-size: 11px;
+			font-family: "Ubuntu-Medium", sans-serif;
+			background-color: #6bd519;
+			color: #fff;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			padding: 0px 6px;
+		}
+	}
+	&__link{
+		display: block;
+		position: relative;
+	}
+	.promo-button{
+		width: 95px;
+		color: #fff;
+		font: $font-main;
+		text-align: center;
+		line-height: 56px;
+	}
+}
+.breadcrumbs{
+	@extend .menu-ex;
+	height: 50px;
+	align-items: center;
+	font: 14px "OpenSans-Regular", sans-serif;
+	&__item{
+		color: #bdbdbd;
+		margin-right: 24px;
+		position: relative;
+		&:first-child{
+			color: $text;
+		}
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 5px;
+			height: 8px;
+			top: 50%;
+			right: -15px;
+			transform: translateY(-50%);
+			background-image: url("../img/breadcrumbs-arrow-icon.png");
+		}
+		&:last-child:after{
+			display: none;
+		}
+	}
+}
+/*************MODYFIRES******************/
+.bgc-grey{
+	background-color: #eee;
+}
+.menu-ex{
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	cursor: pointer;
+}
 @import "media"; // Always at the end

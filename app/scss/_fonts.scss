@@ -1,4 +1,7 @@
 @import "_mixins/font-face";
 
-@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
-@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("OpenSans-Bold", "../fonts/OpenSans-Bold/OpenSans-Bold");
+@include font-face("OpenSans-Italic", "../fonts/OpenSans-Italic/OpenSans-Italic");
+@include font-face("OpenSans-Regular", "../fonts/OpenSans-Regular/OpenSans-Regular");
+@include font-face("OpenSans-SemiBold", "../fonts/OpenSans-SemiBold/OpenSans-SemiBold");
+@include font-face("Ubuntu-Medium", "../fonts/Ubuntu-Medium/Ubuntu-Medium");
