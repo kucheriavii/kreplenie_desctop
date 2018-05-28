@@ -10,7 +10,9 @@
 	background-color: $accent;
 	color: #fff;
 }
-
+html{
+	height: 100%;
+}
 body {
 	font-size: 16px;
 	min-width: 320px;
@@ -19,6 +21,7 @@ body {
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
+	height: 100%;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -93,6 +96,35 @@ a, a:hover, a:active, a:focus{
 				left: -26px;
 				top: 50%;
 				transform: translateY(-50%);
+			}
+		}
+	}
+	&--footer{
+		display: block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		font: 14px "OpenSans-SemiBold", sans-serif;
+		width: 100%;
+		max-width: 270px;
+		height: 100%;
+		li{
+			padding: 0;
+			width: 50%;
+			&:nth-child(n){
+				float: left;
+				clear: left;
+			}
+			&:nth-child(n+4){
+				float: right;
+				clear: right;
+				position: relative;
+				right: 0;
+				top: -38px;
+			}
+			a:hover, a:focus, a:active{
+				text-decoration: underline;
 			}
 		}
 	}
@@ -328,6 +360,165 @@ a, a:hover, a:active, a:focus{
 		}
 	}
 }
+.wrapper{
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+}
+/***item***/
+.item-info{
+  .item-name{
+    h1{
+      font: 24px $font-semibold;
+    }
+  }
+}
+.item-slider{
+  display: flex;
+ // height: 560px;
+	justify-content: flex-start;
+}
+.slider{
+	width: 510px;
+	height: 100%;
+}
+.slides-scroll{
+	height: 560px;
+  display: block;
+  list-style-type: none;
+  margin-top: 30px;
+  li:first-child{
+    margin-top: 25px;
+  }
+  li:last-child{
+    margin-bottom: 10px;
+  }
+  .mCSB_scrollTools {
+    height: auto;
+    right: auto;
+    left: 0;
+    -ms-filter: "alpha(opacity=75)";
+  }
+  .mCSB_inside>.mCSB_container {
+    margin-left: 15px;
+  }
+  .mCSB_scrollTools .mCSB_dragger,  .mCSB_scrollTools .mCSB_dragger:hover{
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    opacity: 1;
+  }
+  .mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(207, 25, 25, 0);
+    filter: "alpha(opacity=40)";
+    -ms-filter: "alpha(opacity=40)";
+    opacity: 0;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover, .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: #eeeeee;
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)";
+  }
+  .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonUp{
+    right: -55px;
+    background-image: url("../img/arroq-up-icon.png");
+    width: 52px;
+    height: 25px;
+    background-color: #fff;
+    background-position: center;
+    opacity: 1 !important;
+  }
+  .mCSB_buttonDown{
+    background-color: #fff;
+    background-image: url("../img/arroq-up-icon.png") !important;
+    background-position: center !important;
+    transform: rotate(180deg);
+    margin-top: 30px !important;
+    z-index: 99999999;
+    opacity: 1 !important;
+  }
+  .mCSB_inside > .mCSB_container{
+    padding-bottom: 15px;
+  }
+  .slides-scroll .mCSB_scrollTools{
+    opacity: 1 !important;
+  }
+  &__item{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+	  .slides-scroll__image{
+      display: inline-block;
+      height: 100%;
+    }
+  }
+}
+.item-slider{
+	img{
+		display: inline-block;
+	}
+}
+
+/***footer***/
+.empty{
+	height: 200px;
+}
+.footer {
+	height: 200px;
+	margin-top: -200px;
+	position: relative;
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	font-family: $font-semibold;
+}
+.button--mobile-version{
+	//margin-top: 30px;
+	&:before{
+		background-image: url("../img/cell-icon.png");
+		width: 12px;
+		height: 16px;
+		@extend .btn-after-ex;
+	}
+}
+.phones--footer{
+	width: auto;
+	li{
+		display: block;
+	}
+}
+.footer-copyright{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 30px;
+	align-items: center;
+}
+.copyright{
+	font-size: 14px;
+	color: #bdbdbd;
+}
+
+/*********/
+.button{
+	display: block;
+	border: none;
+	background-color: $accent;
+	height: 50px;
+	font: 14px "OpenSans-Bold", sans-serif;
+	color: $text-white;
+	padding: 0 25px 0 45px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: relative;
+	&:hover, &:active, &:focus{
+		outline: 0;
+		background-color: $active-accent;
+	}
+}
 /*************MODYFIRES******************/
 .bgc-grey{
 	background-color: #eee;
@@ -339,4 +530,14 @@ a, a:hover, a:active, a:focus{
 	list-style-type: none;
 	cursor: pointer;
 }
+.btn-after-ex{
+	content: "";
+	display: inline-block;
+	line-height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 25px;
+	transform: translateY(-50%);
+}
+
 @import "media"; // Always at the end

@@ -3,24 +3,34 @@
 
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
+
 @include media-breakpoint-down(lg) {
 	
 }
 
-// ≥992px
+// ≥1366px
 @include media-breakpoint-down(md) {
 
 }
 
-// ≥768px
+// ≥1280px
 @include media-breakpoint-down(sm) {
-
+  body:before{
+    content: "Не готово решение для даного разширения";
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    width: 50%;
+    transform: translate(50%,50%);
+    color:#fff;
+    background-color: #f00;
+  }
 }
 
-// ≥576px
+// ≥1024px
 @include media-breakpoint-down(xs) {
-
 }
 
 

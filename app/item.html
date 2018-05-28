@@ -23,106 +23,215 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
 
 </head>
 
 <body>
-<header>
-	<!--top menu-->
-	<div class="bgc-grey">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 col-sm-9">
-					<ul class="main-menu">
-						<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка и оплата</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
-						<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-sm-3">
-					<ul class="main-menu--right">
-						<li class="main-menu__item--right"><a href="#" class="main-menu__link">Вход</a></li>
-						<li class="main-menu__item--right"><a href="#" class="main-menu__link">Регистрация</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--logo & contacts-->
-	<div class="logo-and-contacts">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-xs-3">
-					<div class="logo">
-						<img src="img/logo-lg.png" alt="kreplenie-tv">
-					</div>
-				</div>
-				<div class="col-lg-9 col-xs-9">
-					<div class="contact-info">
-						<ul class="phones-block">
-							<li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
-							<li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
-							<li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+<div class="wrapper">
+	<header>
+		<!--top menu-->
+		<div class="bgc-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-sm-9">
+						<ul class="main-menu">
+							<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка и оплата</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
 						</ul>
-
-						<p class="work-time">Пн – Пт: 9:00–18:00, Сб: 8:00–12:00 Воскресенье: выходной
-						</p>
+					</div>
+					<div class="col-lg-3 col-sm-3">
+						<ul class="main-menu--right">
+							<li class="main-menu__item--right"><a href="#" class="main-menu__link">Вход</a></li>
+							<li class="main-menu__item--right"><a href="#" class="main-menu__link">Регистрация</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!--header-menu-->
-	<div class="header-menu">
+		<!--logo & contacts-->
+		<div class="logo-and-contacts">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-xs-3">
+						<div class="logo">
+							<img src="img/logo-lg.png" alt="kreplenie-tv">
+						</div>
+					</div>
+					<div class="col-lg-9 col-xs-9">
+						<div class="contact-info">
+							<ul class="phones-block">
+								<li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
+								<li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
+								<li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+							</ul>
+
+							<p class="work-time">Пн – Пт: 9:00–18:00, Сб: 8:00–12:00 Воскресенье: выходной
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--header-menu-->
+		<div class="header-menu">
+			<div class="container">
+				<div class="row">
+					<div class="header-menu__wrapper">
+						<ul class="drop-menu">
+							<li class="drop-menu__item active"><a href="#">Каталог товаров</a></li>
+							<li class="drop-menu__item "><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+						</ul>
+						<div class="search-box">
+							<input class="search-box__input" type="text" name="search" placeholder="Поиск товара">
+							<button class="search-box-button">Найти</button>
+						</div>
+						<ul class="header-buttons">
+							<li class="header-buttons__item promo-button"><a href="#" class="header-buttons__link">Акции!<span class="counter"></span></a></li>
+							<li class="header-buttons__item settings-button"><a href="#" class="header-buttons__link"><img
+									src="img/settings-icon.png" alt=""><span class="counter">12</span></a></li>
+							<li class="header-buttons__item likes-button"><a href="#" class="header-buttons__link"><img
+									src="img/heards-icon.png" alt=""><span class="counter">1</span></a></li>
+							<li class="header-buttons__item basket-button"><a href="#" class="header-buttons__link"><img
+									src="img/basket-icon.png" alt=""><span class="counter">1212</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Breadcrumbs-->
 		<div class="container">
 			<div class="row">
-				<div class="header-menu__wrapper">
-					<ul class="drop-menu">
-						<li class="drop-menu__item active"><a href="#">Каталог товаров</a></li>
-						<li class="drop-menu__item "><a href="#">Каталог</a></li>
-						<li class="drop-menu__item"><a href="#">Каталог</a></li>
-						<li class="drop-menu__item"><a href="#">Каталог</a></li>
-						<li class="drop-menu__item"><a href="#">Каталог</a></li>
-						<li class="drop-menu__item"><a href="#">Каталог</a></li>
-					</ul>
-					<div class="search-box">
-						<input class="search-box__input" type="text" name="search" placeholder="Поиск товара">
-						<button class="search-box-button">Найти</button>
-					</div>
-					<ul class="header-buttons">
-						<li class="header-buttons__item promo-button"><a href="#" class="header-buttons__link">Акции!<span class="counter"></span></a></li>
-						<li class="header-buttons__item settings-button"><a href="#" class="header-buttons__link"><img
-								src="img/settings-icon.png" alt=""><span class="counter">12</span></a></li>
-						<li class="header-buttons__item likes-button"><a href="#" class="header-buttons__link"><img
-								src="img/heards-icon.png" alt=""><span class="counter">1</span></a></li>
-						<li class="header-buttons__item basket-button"><a href="#" class="header-buttons__link"><img
-								src="img/basket-icon.png" alt=""><span class="counter">1212</span></a></li>
+				<div class="com-lg-12 col-sm-12">
+					<ul class="breadcrumbs">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Крепления для ТВ и мониторов</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!--Breadcrumbs-->
+	</header>
 	<div class="container">
 		<div class="row">
-			<div class="com-lg-12 col-sm-12">
-				<ul class="breadcrumbs">
-					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
-					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
-					<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Крепления для ТВ и мониторов</a></li>
-				</ul>
+			<div class="col-md-9">
+				<div class="item-info">
+					<div class="item-name">
+						<span class="item-code">Код: 45881</span>
+						<h1>Крепление для ТВ настенное Brateck LCD 502AB</h1>
+						<div class="item-slider">
+							<ul class="slides-scroll">
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+								<li class="slides-scroll__item"><img class="slides-scroll__image" src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></li>
+							</ul>
+							<div class="item-img">
+								<div class="slider">
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></div>
+									<div>ssdfsdfsd<img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">1</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">2</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">3</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">4</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">56</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">7</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">8</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">9</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">0</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">--</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">`1</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">12</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">13</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">41</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">14</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">16</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">17</div>
+									<div><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB">20</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+
+			<div class="col-md-3"></div>
 		</div>
 	</div>
-</header>
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorem eligendi eum facere fuga molestiae obcaecati odit officia, pariatur perferendis perspiciatis, quibusdam repellat saepe ut voluptatem? Deleniti fugiat quis saepe.
-</p>
+	<div class="empty"></div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<button class="button button--mobile-version">Мобильная версия сайта</button>
+			</div>
+			<div class="col-md-3">
+				<ul class="main-menu--footer">
+					<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка и оплата</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="contact-info">
+					<ul class="phones-block phones--footer">
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+					</ul>
+
+					<p class="work-time">Пн – Пт: 9:00–18:00<br> Сб: 8:00–12:00<br> Воскресенье: выходной
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="footer-copyright">
+				<div class="copyright">2018 © Kreplenie-TV.com.ua</div>
+				<div class="our-logo">
+					<img src="img/akweb-logo.png" alt="AKWEB development">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</footer>
 
 	<script src="js/scripts.min.js"></script>
 
