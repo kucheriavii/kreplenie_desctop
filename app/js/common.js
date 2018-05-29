@@ -9,16 +9,17 @@ $(function() {
     $('.item__slider-wrap').slick({
         arrows: false
     });
-
-
-   /* $('.slider__item').magnificPopup({
+    $('.slider__item').magnificPopup({
         type:'image',
         delegate: 'a'
-    });*/
-	// Custom JS
+    });
+
+    // Custom JS
     dropMenuHover();
-    headerButtonActive();
+    setActive();
     slickGoTo('.slides-scroll__item','.item__slider-wrap')
+    rating();
+    item_counter();
 });
 
 var dropMenuHover = function(){
@@ -31,11 +32,15 @@ var dropMenuHover = function(){
     });
 };
 
-var headerButtonActive = function (e) {
+var setActive = function () {
   var headerButton = $('.header-buttons__item');
+  var itemLikes = $('.item-likes');
   headerButton.on('click', function(){
       headerButton.removeClass('active');
-      $(this).toggleClass('active')
+      $(this).toggleClass('active');
+  });
+  itemLikes.on('click', function(){
+      $(this).toggleClass('active');
   })
 };
 
@@ -48,4 +53,50 @@ var slickGoTo = function(el, slider) {
 
 };
 
+var rating = function() {
+    var star = $(".rating__star");
+    /*add stable class*/
+    star.parent().on('click', ".rating__star" , function () {
+        star.removeClass('active');
+        $(this).prevAll(".rating__star").addClass("active").end().addClass('active');
+    });
+    /*add tempreory class*/
+    star.parent().on('mouseenter', ".rating__star" , function () {
+        star.removeClass('active')
+        $(this).prevAll(".rating__star").addClass("active_js").end().addClass('active_js');
+    });
+    /*remove tempreory class*/
+    star.parent().on('mouseleave', ".rating__star" , function () {
+        star.nextAll('.rating__star').removeClass('active_js')
+    });
+};
+
+
+var item_counter = function(){
+    var counter = $('.item-counter__input').val(),
+        input = $('.item-counter__input')
+        button_minus = $('.item-counter__button').eq(0),
+        button_plus = $('.item-counter__button').eq(1);
+    button_minus.click(function () {
+        counter = input.val();
+        counter--;
+        counter<1?counter=1:counter;
+        input.val(counter);
+    });
+
+    button_plus.click(function () {
+        counter = $('.item-counter__input').val();
+        counter++;
+        counter>9999?counter=9999:counter;
+        input.val(counter);
+    });
+
+    input.blur(function(){
+        counter = $('.item-counter__input').val();
+        counter>9999?counter=9999:counter;
+        counter = parseInt(counter);
+        input.val(isNaN(counter)?1:counter);
+    })
+
+};
 //slider main
