@@ -2951,19 +2951,76 @@ span.feedback {
 .item-discounted {
   border-bottom: 1px solid #eee; }
   .item-discounted__item {
-    margin: 12px 0;
+    margin: 12px 0 5px;
     font: 12px "OpenSans-SemiBold", sans-serif;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
     .item-discounted__item:before {
+      line-height: 16px;
       content: "";
       height: 16px;
       width: 25px;
       display: inline-block;
       background-image: url("../img/cut-icon.png");
       background-repeat: no-repeat; }
+
+.item-delivery-and-payment, .waranty {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px; }
+  .item-delivery-and-payment__header, .waranty__header {
+    display: inline-block;
+    margin-right: 10px;
+    font: 14px "OpenSans-SemiBold", sans-serif;
+    height: 18px;
+    line-height: 18px; }
+    .item-delivery-and-payment__header:before, .waranty__header:before {
+      content: "";
+      height: 100%;
+      width: 30px;
+      display: block;
+      background-image: url("../img/car-icon.png");
+      background-repeat: no-repeat;
+      float: left;
+      background-position-y: 50%; }
+  .item-delivery-and-payment .info-item, .waranty .info-item {
+    position: relative;
+    top: 3px; }
+  .item-delivery-and-payment__list, .waranty__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .item-delivery-and-payment__item, .waranty__item {
+    font: 12px "OpenSans-Regular", sans-serif; }
+    .item-delivery-and-payment__item.grey-text, .waranty__item.grey-text {
+      font-size: 12px;
+      color: #bdbdbd; }
+
+.waranty__header:before {
+  background-image: url("../img/sheild-icon.png");
+  width: 24px; }
+
+.item-characteristic {
+  font-size: 12px;
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0; }
+  .item-characteristic__type {
+    font-family: "OpenSans-Bold", sans-serif; }
+    .item-characteristic__type:after {
+      content: ": "; }
+  .item-characteristic__value:after {
+    content: ";"; }
+  .item-characteristic__all-characteristic, .item-characteristic__instructions {
+    display: inline-block;
+    font: 14px "OpenSans-SemiBold", sans-serif;
+    color: #bdbdbd;
+    border-bottom: dashed 1px;
+    margin-right: 30px; }
+    .item-characteristic__all-characteristic:hover, .item-characteristic__all-characteristic:active, .item-characteristic__all-characteristic:focus, .item-characteristic__instructions:hover, .item-characteristic__instructions:active, .item-characteristic__instructions:focus {
+      color: #9d9d9d !important; }
 
 /***footer***/
 .empty {
@@ -3038,6 +3095,13 @@ span.feedback {
     padding: 0 32px;
     margin: auto 20px; }
 
+.info-item {
+  background-image: url("../img/info-icon.png");
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  padding-top: 10px; }
+
 /*************MODYFIRES******************/
 .bgc-grey {
   background-color: #eee; }
@@ -3063,7 +3127,7 @@ span.feedback {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.mfp-zoom-out-cur {
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: pointer; }
 
 /*User vars*/

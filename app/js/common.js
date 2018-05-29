@@ -57,12 +57,12 @@ var rating = function() {
     var star = $(".rating__star");
     /*add stable class*/
     star.parent().on('click', ".rating__star" , function () {
-        star.removeClass('active');
+        $(this).siblings('.rating__star').removeClass('active');
         $(this).prevAll(".rating__star").addClass("active").end().addClass('active');
     });
     /*add tempreory class*/
     star.parent().on('mouseenter', ".rating__star" , function () {
-        star.removeClass('active')
+        $(this).siblings('.rating__star').removeClass('active');
         $(this).prevAll(".rating__star").addClass("active_js").end().addClass('active_js');
     });
     /*remove tempreory class*/

@@ -665,10 +665,11 @@ span.feedback{
 .item-discounted{
 	border-bottom: 1px solid #eee;
 	&__item{
-		margin: 12px 0;
+		margin: 12px 0 5px;
 		font: 12px "OpenSans-SemiBold", sans-serif;
 		display: flex;
 		&:before{
+			line-height: 16px;
 			content: "";
 			height: 16px;
 			width: 25px;
@@ -678,6 +679,75 @@ span.feedback{
 		}
 	}
 }
+.item-delivery-and-payment, .waranty{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 8px;
+	&__header{
+		display: inline-block;
+		margin-right: 10px;
+		font: 14px "OpenSans-SemiBold", sans-serif;
+		height: 18px;
+		line-height: 18px;
+		&:before {
+			content: "";
+			height: 100%;
+			width: 30px;
+			display: block;
+			background-image: url('../img/car-icon.png');
+			background-repeat: no-repeat;
+			float: left;
+			background-position-y: 50%;
+		}
+	}
+	.info-item{
+		position: relative;
+		top: 3px;
+	}
+	&__list{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	&__item{
+		font: 12px $default-font;
+		&.grey-text{
+			font-size: 12px;
+			color: #bdbdbd;
+		}
+	}
+}
+.waranty__header:before{
+	background-image: url("../img/sheild-icon.png");
+	width: 24px;
+}
+
+.item-characteristic{
+	font-size: 12px;
+	display: block;
+	list-style-type: none;
+	padding: 0;
+	margin: 8px 0;
+	&__type{
+		font-family: "OpenSans-Bold", sans-serif;
+		&:after{
+			content: ": ";
+		}
+	}
+	&__value:after{
+		content: ";";
+	}
+	&__all-characteristic, &__instructions{
+		display: inline-block;
+		font: 14px "OpenSans-SemiBold", sans-serif;
+		color: #bdbdbd;
+		border-bottom: dashed 1px;
+		margin-right: 30px;
+		&:hover, &:active, &:focus{
+			color: #9d9d9d !important;
+		}
+	}
+}
+
 /***footer***/
 .empty{
 	height: 200px;
@@ -752,6 +822,13 @@ span.feedback{
 
 	}
 }
+.info-item{
+	background-image: url("../img/info-icon.png");
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	padding-top: 10px;
+}
 /*************MODYFIRES******************/
 .bgc-grey{
 	background-color: #eee;
@@ -772,7 +849,7 @@ span.feedback{
 	left: 25px;
 	transform: translateY(-50%);
 }
-.mfp-zoom-out-cur{
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close{
 	cursor: pointer;
 }
 
