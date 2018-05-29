@@ -6,12 +6,19 @@ $(function() {
     $('.slides-scroll li').click(function(){
         console.log($(this));
     });
-    $('.slider').slick();
+    $('.item__slider-wrap').slick({
+        arrows: false
+    });
 
+
+   /* $('.slider__item').magnificPopup({
+        type:'image',
+        delegate: 'a'
+    });*/
 	// Custom JS
     dropMenuHover();
     headerButtonActive();
-    slickGoTo('.slides-scroll__item','.slider')
+    slickGoTo('.slides-scroll__item','.item__slider-wrap')
 });
 
 var dropMenuHover = function(){
