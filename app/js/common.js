@@ -20,13 +20,19 @@ $(function() {
         type:'image',
         delegate: 'a'
     });
-
+    $('.gallery-item').magnificPopup({
+        type: 'image',
+        gallery:{
+            enabled: true
+        }
+    });
     // Custom JS
     dropMenuHover();
     setActive();
     slickGoTo('.slides-scroll__item','.item__slider-wrap')
     rating();
     item_counter();
+    showMore();
 });
 
 var dropMenuHover = function(){
@@ -43,6 +49,7 @@ var setActive = function () {
   var headerButton = $('.header-buttons__item');
   var itemLikes = $('.item-likes');
   var itemMenuElement = $(".item-main-menu__link");
+  var itemTheSameLike = $('.item__the-same-like');
   headerButton.on('click', function(){
       headerButton.removeClass('active');
       $(this).toggleClass('active');
@@ -54,6 +61,13 @@ var setActive = function () {
       e.preventDefault();
       itemMenuElement.parents('.item-main-menu').find('.item-main-menu__element').removeClass('active');
       $(this).parents('.item-main-menu__element').addClass('active');
+      var elementMenuChosen = $(this).parents('.item-main-menu__element').index('.item-main-menu__element');
+      $(".item-main-menu__block").removeClass('active').end();
+      $(".item-main-menu__block").eq(elementMenuChosen).addClass('active');
+
+  });
+  itemTheSameLike.on('click', function(){
+      $(this).toggleClass('active');
   });
 };
 
@@ -113,6 +127,41 @@ var item_counter = function(){
         counter = parseInt(counter);
         input.val(isNaN(counter)?1:counter);
     })
+};
 
+var showMore = function(){
+    var text,
+        feedbacks_height = parseInt($('.feedback-item__answers').height());
+    console.log(feedbacks_height)
+    $(document).on('click', '.show-more', function(e){
+       e.preventDefault();
+       e.stopPropagation();
+       text = $(this).text();
+       $('.item-main-menu__block-description').animate({height:'100%'});
+       $(this).removeClass("show-more").addClass('show-less').text('Скрыть текст');
+    });
+    $(document).on('click', '.show-less', function(e){
+       e.preventDefault();
+       console.log("test");
+       e.stopPropagation();
+       $('.item-main-menu__block-description').css({height:'200px'});
+       $(this).removeClass("show-less").addClass('show-more').text(text);
+    });
+
+    //feedback answers
+    $(document).on('click', '.feedback-item__answer-show-more', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        text = $(this).text();
+        $('.feedback-item__answers').animate({height:'100%'});
+        $(this).removeClass("feedback-item__answer-show-more").addClass('feedback-item__answer-show-less').text('Скрыть ответы');
+    });
+    $(document).on('click', '.feedback-item__answer-show-less', function(e){
+        e.preventDefault();
+        console.log("test");
+        e.stopPropagation();
+        $('.feedback-item__answers').css({height:feedbacks_height});
+        $(this).removeClass("feedback-item__answer-show-less").addClass('feedback-item__answer-show-more').text(text);
+    });
 };
 //slider main

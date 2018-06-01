@@ -394,14 +394,15 @@ a, a:hover, a:active, a:focus{
 /***********slider***********/
 .item-slider{
   display: flex;
- // height: 560px;
-	justify-content: flex-start;
-	margin-right: 10px;
+  height: 560px;
+  justify-content: flex-start;
+  margin-right: 10px;
+  overflow: hidden;
 }
 .item__slider-wrap{
-	width: 510px;
-	height: 560px;
-	//margin-top: 30px;
+  width: 510px;
+  height: 560px;
+  //margin-top: 30px;
 }
 .slides-scroll{
   height: 560px;
@@ -419,7 +420,6 @@ a, a:hover, a:active, a:focus{
     height: auto;
     right: auto;
     left: 0;
-    -ms-filter: "alpha(opacity=75)";
   }
   .mCSB_inside>.mCSB_container {
     margin-left: 15px;
@@ -434,15 +434,11 @@ a, a:hover, a:active, a:focus{
   .mCSB_scrollTools .mCSB_draggerRail {
     background-color: #000;
     background-color: rgba(207, 25, 25, 0);
-    filter: "alpha(opacity=40)";
-    -ms-filter: "alpha(opacity=40)";
     opacity: 0;
   }
   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover, .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
     background-color: #fff;
     background-color: #eeeeee;
-    filter: "alpha(opacity=75)";
-    -ms-filter: "alpha(opacity=75)";
   }
   .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonUp{
     right: -55px;
@@ -503,50 +499,51 @@ a, a:hover, a:active, a:focus{
 
 .item-infoblock{
 	//background-color: #ffc107;
-	width: 400px;
-	height: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: 15px;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-right: -10px;
 }
 .price{
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	padding: 0;
-	height: 33px;
-	margin-bottom: 5px;
-	&--actual{
-		background-color: $sand-color;
-		font: 28px "OpenSans-SemiBold", sans-serif;
-		display: flex;
-		margin-right: 10px;
-	}
-	&--unactual{
-		font: 18px "OpenSans-SemiBold", sans-serif;
-		display: flex;
-		position: relative;
-		overflow: hidden;
-		&:after{
-			content: "";
-			display: block;
-			width: 100%;
-			background-color: #f00;
-			height: 3px;
-			position: absolute;
-			top: 11px;
-			right: 24px;
-		}
-	}
-	.currency{
-		font-family: "OpenSans-Bold", sans-serif;
-		font-size: .6em;
-		display: inline-block;
-		align-self: start;
-		margin-top: .2em;
-		margin-left: 2px;
-		min-width: 22px;
-	}
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  height: 33px;
+  margin-bottom: 5px;
+  &--actual{
+      background-color: $sand-color;
+      font: 28px "OpenSans-SemiBold", sans-serif;
+      display: flex;
+      margin-right: 10px;
+  }
+  &--unactual{
+      font: 18px "OpenSans-SemiBold", sans-serif;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      &:after{
+          content: "";
+          display: block;
+          width: 100%;
+          background-color: #f00;
+          height: 3px;
+          position: absolute;
+          top: 11px;
+          right: 24px;
+      }
+  }
+  .currency{
+      font-family: "OpenSans-Bold", sans-serif;
+      font-size: .6em;
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: .2em;
+      margin-left: 2px;
+      min-width: 22px;
+  }
 }
 .rating{
 	display: flex;
@@ -748,6 +745,7 @@ span.feedback{
 	}
 }
 .the-same-item__container{
+  padding-left: 10px;
   margin: 0px 20px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -770,8 +768,9 @@ span.feedback{
 }
 .item__the-same-wrapper{
   border: $border;
-  height: 450px;
+  max-height: 450px;
   margin-right: 30px;
+  padding: 8px 0;
  // margin-right: -10px;
   &__header{
     font: 18px "OpenSans-Bold", sans-serif;
@@ -780,6 +779,7 @@ span.feedback{
 }
 .item__the-same{
   display: flex;
+  position: relative;
   &__header{
     font: 12px $font-semibold;
   }
@@ -790,6 +790,19 @@ span.feedback{
     margin: 10px 10px 30px 20px;
     object-fit: contain;
   }
+  &-like{
+    background-size: contain;
+    position: absolute;
+    background-image: url("../img/heards-gray-icon.png");
+    width: 18px;
+    height: 16px;
+    top: 10px;
+    background-repeat: no-repeat;
+    left: 20px;
+    &.active{
+      background-image: url("../img/heards-red-icon.png");
+    }
+  }
   .price{
     height: auto;
   }
@@ -798,25 +811,231 @@ span.feedback{
   }
   .price--unactual{
     font-size: 14px;
+    &:after{
+      top: 9px;
+    }
   }
 }
 /**item menu**/
 .item-main-menu{
   @extend .menu-ex;
   border: $border;
+  margin-right: -130px;
   &__element{
     height: 50px;
     padding: 13px;
     border-right: $border;
+	display: flex;
+	align-items: center;
     &.active{
       border-bottom: solid 2px #1e88e5;
+      height: 50px;
+      position: relative;
+      bottom: -1px;
+    }
+  }
+  &__link{
+    width: 100%;
+    font: 14px $font-semibold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .counter{
+	display: block;
+	margin-left: 5px;
+	border-radius: 50%;
+    background-color: #64dd17;
+    font-size: 10px;
+    min-width: 16px;
+    text-align: center;
+    color: #fff;
+  }
+  &__block{
+    display: none;
+    font-size: 12px;
+    &.active{
+      display: block;
+    }
+    .gray-dashed-link{
+      margin: 16px 0px 14px;
+    }
+  }
+  &__block-description{
+    height: 220px;
+    overflow-y: hidden;
+    h3{
+      font: 14px/48px $font-semibold;
+    }
+    p{
+      font-size: 12px;
     }
   }
 }
 .wrapper .item-main-menu{
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-right: -130px;
 }
+
+.item__feedback{
+  margin-top: 110px;
+  padding-left: 50px;
+  .leave-feedback{
+    padding-left:50px;
+    padding-right: 50px;
+    margin-bottom: 8px;
+    &:before{
+      content: "";
+      display: inline-block;
+      background-image: url(../img/leave-feedback-icon.png);
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 29px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .info{
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+.feedback__wrapper{
+  margin-top: 20px;
+  h2{
+    font: 14px $font-semibold;
+  }
+  p{
+    line-height: 16px;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+}
+.feedback-item{
+  &-header {
+    display: flex;
+    align-items: center;
+  }
+  .rating-feedback li{
+    width: 12px;
+    height: 11px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 2px;
+  }
+  &__user-name{
+    font: 12px "OpenSans-Bold", sans-serif;
+    margin-left: 10px;
+  }
+  &__date{
+    font-size: 14px;
+    color: #bdbdbd;
+    position: absolute;
+    right: 115px;
+  }
+  &__text{
+    font-size: 12px;
+    margin-top: 10px;
+    .feedback-item__text{
+      display: inline-block;
+      font: 12px "OpenSans-Bold", sans-serif;
+    }
+    .strong{
+      font: 12px "OpenSans-Bold", sans-serif;
+    }
+  }
+  &__photos{
+    @extend .menu-ex;
+    max-width: 360px;
+    overflow: hidden;
+    margin: 15px 0;
+  }
+  &__photo{
+    height: 60px;
+    margin-right: 16px;
+    width: 60px;
+    img{
+      display: block;
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+  &__menu-buttons{
+    height: 50px;
+    display: flex;
+    margin: 17px 0;
+    button{
+      display: flex;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+  &__like, &__unlike{
+    justify-content: space-between;
+    width: 50px;
+    border: none;
+    height: 50px;
+    display: block;
+    align-items: center;
+    margin-left: 15px;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-position: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__like{
+    &:before{
+      background-image: url("../img/like-icon.png");
+    }
+  }
+  &__unlike{
+    &:before{
+      background-image: url("../img/unlike.png");
+    }
+  }
+  &__button-answer{
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 50px;
+    font: 14px/50px "OpenSans-Bold";
+    padding: 0 37px;
+  }
+}
+.feedback-item__answers{
+  height: 280px;
+  overflow-y: hidden;
+  transition: all .3s;
+}
+.feedback-item__answer{
+  &-header{
+    display: flex;
+    height: 25px;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    .grey-text{
+      font: 12px "OpenSans-Bold", sans-serif;
+      color: #bdbdbd;
+    }
+  }
+  &__user-name{
+    font: 12px "OpenSans-Bold", sans-serif;
+    margin-left: 15px;
+  }
+  &-show-more{
+    margin: 15px 0;
+  }
+}
+
+
 /***footer***/
 .empty{
 	height: 200px;
@@ -898,6 +1117,27 @@ span.feedback{
 	display: inline-block;
 	padding-top: 10px;
 }
+.pdf_download{
+  display: flex;
+  height: 32px;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #5856d6;
+  &:hover,&:active,&:focus{
+    text-decoration: underline;
+    color: #5000d6;
+  }
+  &:before{
+    content: "";
+    display: block;
+    background-image: url("../img/pdf-icon.png");
+    width: 30px;
+    height: 32px;
+    margin-right: 5px;
+  }
+}
+
 /*************MODYFIRES******************/
 .bgc-grey{
 	background-color: #eee;
@@ -923,7 +1163,6 @@ span.feedback{
 }
 .mCSB_scrollTools {
   height: auto;
-  -ms-filter: "alpha(opacity=75)";
 }
 .mCSB_inside>.mCSB_container {
   margin-left: 15px;
@@ -938,15 +1177,11 @@ span.feedback{
 .mCSB_scrollTools .mCSB_draggerRail {
   background-color: #000;
   background-color: rgba(207, 25, 25, 0);
-  filter: "alpha(opacity=40)";
-  -ms-filter: "alpha(opacity=40)";
   opacity: 0;
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover, .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
   background-color: #fff;
   background-color: #eeeeee;
-  filter: "alpha(opacity=75)";
-  -ms-filter: "alpha(opacity=75)";
 }
 .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonUp{
   right: -55px;
@@ -969,7 +1204,16 @@ span.feedback{
 .slides-scroll .mCSB_scrollTools{
   opacity: 1 !important;
 }
-
+.gray-dashed-link{
+	display: inline-block;
+	font: 14px "OpenSans-SemiBold", sans-serif;
+	color: #bdbdbd;
+	border-bottom: dashed 1px;
+	margin-right: 30px;
+	&:hover, &:active, &:focus{
+		color: #9d9d9d !important;
+	}
+}
 
 
 
