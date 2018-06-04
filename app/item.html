@@ -431,9 +431,50 @@
             </div>
             <div class="col-md-8 col-sm-10">
                 <div class="item__feedback">
-                    <button class="button leave-feedback">Оставить отзыв или фото</button>
+                    <button class="button leave-feedback__button">Оставить отзыв или фото</button>
                     <span class="info">Получайте скидку до 10% на следующий заказ!</span>
+                    <div class="leave-feedback__wrapper">
+                        <h3>Отзыв с 2 фото: скидка до 10%
+                            Без фото до 5%</h3>
+                        <span class="info-item"></span>
+                        <div class="leave-feedback__rating-box">
+                            <span class="leave-feedback__rating-text">Оцените товар</span>
+                            <ul class="rating rating-leave-feedback">
+                                <li class="rating__star active"></li>
+                                <li class="rating__star"></li>
+                                <li class="rating__star"></li>
+                                <li class="rating__star"></li>
+                                <li class="rating__star"></li>
+                            </ul>
 
+                            <form action="#">
+                                <label for="feedback-text">Отзыв *</label>
+                                <textarea name="feedback" id="feedback-text" cols="30" rows="5" placeholder="Обязательное поле" required></textarea>
+
+                                <label for="feedback-advantages">Достоинства</label>
+                                <textarea name="feedback" id="feedback-advantages" cols="30" rows="2"></textarea>
+
+                                <label for="feedback-disadvantages">Недостатки</label>
+                                <textarea name="feedback" id="feedback-disadvantages" cols="30" rows="2"></textarea>
+
+                                <label for="feedback-photos">
+                                    <span class="jpg_download">Загрузить фотографии товара</span>
+                                </label>
+                                <input type="file" id="feedback-photos" name="photo" hidden>
+
+                                <label for="feedback-user-name">Имя*</label>
+                                <input name="feedback" id="feedback-user-name" type="text" placeholder="Обязательное поле" required>
+
+                                <label for="feedback-user-name">E-mail* <span class="grey-text">не отображается в отзывах</span></label>
+                                <input name="feedback" id="feedback-user-mail" type="text" placeholder="Обязательное поле" required>
+
+
+
+
+                                <input type="submit">
+                            </form>
+                        </div>
+                    </div>
                     <div class="feedback__wrapper">
                         <h2>Отзывы покупателей:</h2>
                         <div class="feedback-item">
@@ -1011,6 +1052,19 @@
 	</div>
 </footer>
 
+<!--popups-->
+<div class="popup-wrapper">
+    <div class="popup delivery-and-payment">
+        <div class="popup-panel">
+            <h2 class="popup-name">Lorem ipsum dolor.</h2>
+            <a href="" class="popup-close"></a>
+        </div>
+
+        <div class="popup-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam assumenda aut consectetur consequuntur dolor eligendi eum, ex explicabo fuga id modi obcaecati odit optio perspiciatis possimus provident quas quod saepe similique sit ullam veniam voluptate, voluptatem voluptatibus! Adipisci corporis, deserunt dolorem et facilis fugit illo labore natus, neque nihil saepe, veniam vitae voluptatem. Architecto blanditiis dolore, expedita hic iste porro quibusdam quos similique? Aperiam consequuntur cum illum impedit iure minus mollitia nisi nostrum, unde voluptatem. A alias beatae blanditiis, consectetur cum cumque dignissimos dolore doloribus ducimus enim fugiat harum illo, impedit in iure magnam, maxime nemo non nostrum numquam quia quis ratione rem repellendus similique tenetur ullam unde veniam voluptas voluptatem! Ab dolor ea exercitationem expedita facere ipsa magnam maxime minima modi nam natus neque nulla, omnis placeat, quisquam unde voluptates. Ab accusantium asperiores blanditiis consequatur dolorem, itaque laudantium magni nostrum, officiis quaerat quam quasi recusandae sint soluta suscipit totam voluptate voluptatem. Distinctio dolorem, eaque est hic magni neque placeat ullam. Adipisci aperiam aspernatur autem cum distinctio id impedit ipsa ipsum libero nemo neque nisi, nobis odio odit quae repellat sequi tenetur ullam vel velit. Accusantium adipisci alias, aliquam at beatae consectetur culpa debitis doloremque eos esse eveniet exercitationem, facere facilis hic in laboriosam maiores natus nesciunt quam quisquam repudiandae sit tenetur veritatis. Aliquid deleniti iste porro quisquam ullam veritatis? Adipisci assumenda distinctio dolore labore minima nihil numquam odio porro quas suscipit! Consectetur dolor molestias velit? A ab alias amet animi architecto consectetur deleniti doloribus ducimus ea earum eligendi enim, eos ex fuga illo in mollitia neque officiis, quas qui quia rem repellendus rerum saepe ut veniam vitae! Facilis fuga ipsam laborum nemo nobis officiis totam ut vitae. Amet autem consequatur culpa cum cupiditate deserunt distinctio doloremque ea eaque earum ex incidunt inventore laboriosam laudantium magnam maiores modi natus nisi nobis numquam officia quaerat quod sequi sint, soluta suscipit totam voluptatum! Adipisci amet beatae commodi cumque, cupiditate delectus dolores eum ex facere id incidunt ipsam iusto magni modi molestiae nam nihil nobis officiis porro quam quos reiciendis reprehenderit repudiandae sit sunt, suscipit ut voluptatem. A, accusamus architecto aspernatur atque commodi delectus deleniti earum ex excepturi expedita harum hic laborum magnam maiores molestiae mollitia nesciunt nostrum perspiciatis praesentium provident sunt ut veritatis vero voluptates voluptatum. Ab atque consectetur culpa dicta error et magnam non sint! Autem hic quod soluta. Accusamus accusantium, assumenda autem beatae dolorem eligendi eum iure neque odio placeat, possimus quia quis quo saepe, sequi totam vero! Ad asperiores expedita id maiores molestiae neque reprehenderit, sint? Aliquid beatae cupiditate esse eveniet excepturi exercitationem fugit, harum inventore, magnam modi molestiae numquam quae quam quas reiciendis totam voluptatibus? Aperiam architecto dicta dignissimos, ea eius eligendi itaque maxime nesciunt numquam odio officia quam, quia quos repellat saepe, similique sit ullam ut veniam voluptatum! Aliquid animi asperiores blanditiis cumque dolorem doloremque eaque enim error eum excepturi, exercitationem, fugiat impedit in iste iusto labore laudantium maiores minus molestias necessitatibus nemo neque officia perferendis placeat provident ratione rerum sapiente sint soluta tenetur totam velit voluptate, voluptatem. Ad corporis deleniti deserunt dolorum earum eum facilis odit, placeat quae reprehenderit sint, voluptatem. Accusantium amet aspernatur deleniti dignissimos enim et, impedit, in, nemo optio provident quasi sint. Ad, animi aperiam, dolore exercitationem omnis, optio quisquam rem repellendus sed temporibus unde veritatis? Aliquid amet architecto aspernatur commodi cumque delectus, deserunt distinctio eaque earum, eligendi ex laudantium nam nihil nisi numquam odit ratione repellat sapiente. Accusantium odit possimus sequi voluptatum? Asperiores autem incidunt iusto magni nulla similique voluptatibus. Alias amet animi aspernatur at autem commodi corporis, debitis dolore dolorem excepturi, illum iste labore molestias mollitia nulla odio officiis qui quos sapiente soluta unde vel voluptas? A aliquid animi architecto assumenda corporis delectus deserunt distinctio dolore doloribus eius et eum facilis id, iste laborum laudantium mollitia nemo nisi non numquam obcaecati perferendis possimus quae quaerat quas repellat rerum sed similique sunt, ut? Dicta error ipsa laudantium nemo pariatur possimus provident quasi, quos. Aperiam consequatur dolore eius enim explicabo fugiat, ipsa iure libero maiores nobis, omnis placeat reprehenderit repudiandae sint suscipit ut, velit vitae voluptas. Consequatur laboriosam necessitatibus perspiciatis repudiandae voluptas? Asperiores aut debitis dolorem illo illum ipsa natus nulla officia quas sed! Animi, architecto corporis cumque debitis doloribus, earum eius error ex facilis illo incidunt iste laboriosam libero minima obcaecati pariatur placeat porro quae quia quo rem saepe sit vel vitae voluptas. Ad blanditiis commodi dolore earum explicabo, hic nulla provident qui quidem sunt! Ab animi asperiores assumenda beatae dignissimos, distinctio dolor doloremque dolorum error fuga fugiat fugit illo iste laborum magnam modi molestiae nemo nesciunt nisi nostrum optio quis quos reprehenderit sequi sunt suscipit unde. Expedita incidunt inventore laboriosam obcaecati ratione. A aut autem cum iusto labore laudantium molestias mollitia nam natus, nemo neque nobis odio provident, quis repellendus reprehenderit sequi soluta tenetur voluptate voluptatibus! Consequuntur fugiat maiores natus.</div>
+    </div>
+</div>
+
+<!--/popups-->
 	<script src="js/scripts.min.js"></script>
 
 </body>

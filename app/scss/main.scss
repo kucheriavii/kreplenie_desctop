@@ -455,7 +455,7 @@ a, a:hover, a:active, a:focus{
     background-position: center !important;
     transform: rotate(180deg);
     margin-top: 30px !important;
-    z-index: 99999999;
+    z-index: 9;
     opacity: 1 !important;
   }
   .mCSB_inside > .mCSB_container{
@@ -881,7 +881,7 @@ span.feedback{
 .item__feedback{
   margin-top: 110px;
   padding-left: 50px;
-  .leave-feedback{
+  .leave-feedback__button{
     padding-left:50px;
     padding-right: 50px;
     margin-bottom: 8px;
@@ -913,7 +913,90 @@ span.feedback{
     font-size: 12px;
     margin-bottom: 8px;
   }
+  &.disactive{
+    opacity: 0.5;
+  }
 }
+.leave-feedback{
+  &__wrapper{
+    display: none;
+    background-color: #f3f339;
+    position: absolute;
+    top: 110px;
+    left: 50px;
+    right: 0;
+    z-index: 2;
+    padding: 15px;
+    h3{
+      font: 14px $font-semibold;
+      display: inline-block;
+      max-width: 70%;
+    }
+    .info-item{
+      position: absolute;
+      margin-left: 2px;
+    }
+    &.active{
+      display: block;
+    }
+    .rating{
+      float: left;
+    }
+    .rating__star {
+      background-image: url(../img/rating-star.png);
+      width: 23px;
+      height: 20px;
+      cursor: pointer;
+      margin-right: 2px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &.active{
+        background-image: url(../img/rating-star-active.png);
+      }
+    }
+    label{
+      width: 100%;
+      font: 14px $font-semibold;
+      margin-top: 15px;
+    }
+    textarea, input[type='text']{
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid #bdbdbd;
+      padding: 5px;
+      &::placeholder{
+        color: $accent;
+      }
+      &:focus{
+        border-color: #5856d6 !important;
+      }
+    }
+    input[type='submit']{
+      @extend .button;
+      padding: 0 25px !important;
+      margin-top: 20px;
+      margin-bottom: 32px;
+    }
+    input[type='text']{
+      height: 40px;
+    }
+    form{
+      font: 12px "OpenSans-Regular";
+    }
+    .grey-text{
+      color: #bdbdbd;
+      font-size: 12px;
+    }
+  }
+  &__rating-text{
+    float: left;
+    margin-right: 10px;
+    font: 14px $font-semibold;
+    height: 20px;
+    line-height: 20px;
+  }
+}
+
 .feedback-item{
   &-header {
     display: flex;
@@ -1289,7 +1372,7 @@ span.feedback{
 	display: inline-block;
 	padding-top: 10px;
 }
-.pdf_download{
+.pdf_download, .jpg_download{
   display: flex;
   height: 32px;
   align-items: center;
@@ -1307,6 +1390,59 @@ span.feedback{
     width: 30px;
     height: 32px;
     margin-right: 5px;
+  }
+}
+.jpg_download{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  &:before{
+    background-image: url("../img/jpg-icon.png");
+  }
+}
+
+.popup-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.6);
+  z-index: 9999;
+}
+.popup{
+  z-index: 10000;
+  background-color: #fff;
+  width: 50%;
+  height: 80%;
+  overflow: auto;
+  position: relative;
+  &-panel{
+    position: fixed;
+    height: 55px;
+    background-color: #fff;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-name{
+    margin-left: 10px;
+
+  }
+  &-content{
+    margin-top: 55px;
+    padding: 10px;
+  }
+  &-close{
+    width: 55px;
+    height: 55px;
+    background-color: #efeff4;
+    background-image: url('../img/close-icon.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
   }
 }
 
@@ -1370,7 +1506,7 @@ span.feedback{
   background-position: center !important;
   transform: rotate(180deg);
   margin-top: 30px !important;
-  z-index: 99999999;
+  z-index: 9;
   opacity: 1 !important;
 }
 .slides-scroll .mCSB_scrollTools{
