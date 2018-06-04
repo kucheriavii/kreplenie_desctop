@@ -10,27 +10,81 @@
 
 // ≥1366px
 @include media-breakpoint-down(md) {
-
+  .item-infoblock{
+    margin-right: -75px;
+  }
+  .the-same-item__container{
+    width: 215px;
+    float: right;
+    margin: 0;
+    margin-left: -10px;
+  }
+  .item__the-same-wrapper{
+    margin-right: 10px;
+    margin-left: -10px;
+  }
+  .the-same-item__container .mCSB_scrollTools .mCSB_buttonDown,
+  .the-same-item__container .mCSB_scrollTools .mCSB_buttonUp{
+    right: 88px;
+  }
 }
 
 // ≥1280px
 @include media-breakpoint-down(sm) {
-  body:before{
-    content: "Не готово решение для даного разширения";
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    width: 50%;
-    transform: translate(50%,50%);
-    color:#fff;
-    background-color: #f00;
+  .search-box__input{
+    width: 320px;
+  }
+  .the-same-item__container{
+    width: 100%;
+    padding: 0;
+    position: relative;
+    .item__the-same-left-scroll,.item__the-same-right-scroll{
+      bottom: 42px;
+    }
+    .mCSB_inside > .mCSB_container{
+      margin-left: 0;
+    }
+  }
+  .item__the-same-wrapper{
+    max-height: 100px;
+    margin: 0;
+    padding: 0 35px;
+  }
+  .item__the-same{
+    display: inline-flex;
+    margin-right: 45px;
+    max-width: 200px;
+  }
+  .item__the-same-like{
+    top: 64px;
+    left: 70px;
+  }
+  .item__the-same__header{
+    margin-bottom: 2px;
+  }
+  .item__the-same__image{
+    margin: 10px 10px 30px 0;
+  }
+  .wrapper .item-main-menu{
+    margin-right: -427px;
+  }
+  .other-categories__item, .history-items__item{
+    margin: 45px 5px 0;
+  }
+  .work-time{
+    width: auto;
+  }
+  .main-menu--footer{
+    margin-top: -4px;
+  }
+  .contact-info{
+    margin-top: -4px;
   }
 }
 
 // ≥1024px
 @include media-breakpoint-down(xs) {
+
 }
 
 
