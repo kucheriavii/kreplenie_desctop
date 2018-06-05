@@ -42,7 +42,7 @@
 							<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
 							<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
 							<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
-							<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка и оплата</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link delivery-and-payment__link">Доставка и оплата</a></li>
 							<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
 							<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
 						</ul>
@@ -159,15 +159,15 @@
 						</ul>
 						<div class="item-img">
 							<div class="item__slider-wrap">
-								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
-								<div class="slider__item"><a class="slider__item-link" href="img/item-img2.jpg"><img src="img/item-img2.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
-								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
-								<div class="slider__item"><div class="slider__item-link">
+								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg">1<img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
+								<div class="slider__item"><a class="slider__item-link" href="img/item-img2.jpg">2<img src="img/item-img2.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
+								<div class="slider__item">3<a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
+								<div class="slider__item">4<div class="slider__item-link">
                                     <!--<iframe style="width: 100%; height: 100%; border:none;" src="https://www.youtube.com/embed/EJ4Dc9m4g8E" allowfullscreen></iframe>-->
                                 </div></div>
-								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
-								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
-								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
+								<div class="slider__item">5<a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
+								<div class="slider__item">6<a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
+								<div class="slider__item">7<a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
 								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
 								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
 								<div class="slider__item"><a class="slider__item-link" href="img/item-img1.jpg"><img src="img/item-img1.jpg" alt="Крепление для ТВ настенное Brateck LCD 502AB"></a></div>
@@ -390,13 +390,16 @@
     <!--CHARACTERISTIC-->
         <div class="row">
             <div class="col-md-16 col-sm-14">
+                <!--item menu-->
                 <ul class="item-main-menu">
                     <li class="item-main-menu__element active"><a href="#" class="item-main-menu__link">Главное о товаре</a></li>
                     <li class="item-main-menu__element"><a href="#" class="item-main-menu__link">Характеристики</a></li>
                     <li class="item-main-menu__element"><a href="#" class="item-main-menu__link">Видео</a></li>
-                    <li class="item-main-menu__element"><a href="#" class="item-main-menu__link">Отзывы <span class="counter">3</span></a></li>
-					<li class="item-main-menu__element"><a href="#" class="item-main-menu__link">Аксессуары</a></li>
+                    <li class="item-main-menu__element"><a href="#" class="item-main-menu__link item-main-menu__link-characteristic">Отзывы<span class="counter">3</span></a></li>
+					<li class="item-main-menu__element"><a href="#" class="item-main-menu__link item-main-menu__link-accessories">Аксессуары</a></li>
 				</ul>
+
+                <!--item description-->
                 <div class="item-main-menu__block active">
                     <div class="item-main-menu__block-description">
                         <h3>Описание</h3>
@@ -422,13 +425,904 @@
                     </ul>
                     <a class="gray-dashed-link" href="#">Все характеристики и описание</a>
                     <a href="#" class="pdf_download">Скачать инструкцию по установке</a>
+                </div>
+
+                <div class="item-main-menu__block">
+
+                    <table class="item-main-menu__block-characteristic">
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Тип</td>
+                            <td class="item-main-menu__block-parameter-value">настенное крепление</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Рекомендованная <br>диагональ телевизора</td>
+                            <td class="item-main-menu__block-parameter-value"><a href="#" class="item-main-menu__block-parameter-link">40 дюймов и больше</a></td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Функции</td>
+                            <td class="item-main-menu__block-parameter-value"><a href="#" class="item-main-menu__block-parameter-link">наклонно-поворотный</a></td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Цвет</td>
+                            <td class="item-main-menu__block-parameter-value">черный</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Максимальная<br>нагрузка на крепление</td>
+                            <td class="item-main-menu__block-parameter-value">40 кг</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Угол наклона</td>
+                            <td class="item-main-menu__block-parameter-value">-15 ~ +5 градусов</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Угол поворота</td>
+                            <td class="item-main-menu__block-parameter-value">120 градусов</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Вращение экрана</td>
+                            <td class="item-main-menu__block-parameter-value">нет</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Минимальное<br> расстояние от стены</td>
+                            <td class="item-main-menu__block-parameter-value">53 мм</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Максимальное<br> расстояние от стены</td>
+                            <td class="item-main-menu__block-parameter-value">464 мм</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Размер монтажной пластины</td>
+                            <td class="item-main-menu__block-parameter-value">474*186 мм</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Уровень</td>
+                            <td class="item-main-menu__block-parameter-value">нет</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Регулировка уровня</td>
+                            <td class="item-main-menu__block-parameter-value">± 3 градусов</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Регулировка по высоте</td>
+                            <td class="item-main-menu__block-parameter-value">нет</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">VESA поддерживаемые<br> размеры</td>
+                            <td class="item-main-menu__block-parameter-value">200×200, 200×300,<br> 200×400, 300×200,<br> 300×300, 300×400,<br> 400×200, 400×300,</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">VESA максимальный<br> размер</td>
+                            <td class="item-main-menu__block-parameter-value">400×400<br>400x400</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Место для укладки<br> кабеля</td>
+                            <td class="item-main-menu__block-parameter-value">нет</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Петли для крепления<br> кабеля</td>
+                            <td class="item-main-menu__block-parameter-value">есть</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Моторизированный</td>
+                            <td class="item-main-menu__block-parameter-value">нет</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Упаковка</td>
+                            <td class="item-main-menu__block-parameter-value">картон</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Размеры упаковки<br> (ШхВхГ)</td>
+                            <td class="item-main-menu__block-parameter-value">590*220*70 мм</td>
+                        </tr>
+                        <tr class="item-main-menu__block-item">
+                            <td class="item-main-menu__block-parameter">Вес (брутто)</td>
+                            <td class="item-main-menu__block-parameter-value">4,8 кг</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="item-main-menu__block">
 
                 </div>
-                <div class="item-main-menu__block"> el2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsa iste porro quos recusandae! Ad alias atque blanditiis dignissimos et eveniet fugiat, labore molestiae natus neque nihil non porro sint?</div>
-                <div class="item-main-menu__block"> el3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid corporis doloribus eius eligendi impedit iure maxime nemo numquam officiis provident, sequi sint sit tempore tenetur totam ut veniam voluptates.</div>
-                <div class="item-main-menu__block"> el4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet animi, dolore esse fugit iste labore nostrum odit omnis quod unde vitae voluptatem? Consequatur dolor facere libero nemo, perferendis praesentium.</div>
-                <div class="item-main-menu__block"> el5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium at enim in incidunt nobis quod veritatis! Atque corporis dolore ducimus eius eum ex harum, laboriosam libero, nisi perferendis quo, repudiandae.</div>
+
+                <div class="item-main-menu__block">
+                    <div class="feedback__wrapper">
+                        <h2>Отзывы покупателей:</h2>
+                        <div class="feedback-item">
+                            <div class="feedback-item-header">
+                                <ul class="rating rating-feedback rating-off">
+                                    <li class="rating__star active"></li>
+                                    <li class="rating__star"></li>
+                                    <li class="rating__star"></li>
+                                    <li class="rating__star"></li>
+                                    <li class="rating__star"></li>
+                                </ul>
+
+                                <span class="feedback-item__user-name">Семён</span>
+                                <span class="feedback-item__date">30.09.2017</span>
+                            </div>
+                            <div class="feedback-item__text">
+                                <p>Достойне кріплення за свої гроші. Монтажні отвори розташовані близько один до одного, що потребує уважного вимірювання для рівного розташування, монтажні болти з м'якого металу, на один раз. 27 дюйомвий монітор (10кг.) тримає міцно.</p>
+                                <p>Всі поворотні з'єднання мають приємну протидію при регулюванні, всі можуть затягуватись чи послаблятись, мають пластикові заглушки. В цілому товаром задоволений. Відправка в день оплати.</p>
+                                <p><strong class="strong">Достоинства: </strong>
+                                    Понравился комплект есть все винты как к стене так и к телевизору.
+                                </p>
+                                <p><strong class="strong">Недостатки: </strong>
+                                    Уровень который входит в комплект показывает ерунду.
+                                </p>
+                            </div>
+                            <ul class="feedback-item__photos">
+                                <li class="feedback-item__photo"><a href="img/item-img1.jpg" class="gallery-item"><img src="img/item-img1.jpg" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/item-img1.jpg" class="gallery-item"><img src="img/feedback-item2.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item3.png" class="gallery-item"><img src="img/feedback-item3.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                            </ul>
+                            <div class="feedback-item__menu-buttons">
+                                <button class="feedback-item__button-answer">Ответить</button>
+                                <button class="feedback-item__like">4</button>
+                                <button class="feedback-item__unlike">1</button>
+                            </div>
+                            <div class="feedback-item__answers">
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="gray-dashed-link feedback-item__answer-show-more">Показать все ответы</a>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="feedback-item-header">
+                                <ul class="rating rating-feedback rating-off">
+                                    <li class="rating__star active"></li>
+                                    <li class="rating__star"></li>
+                                    <li class="rating__star"></li>
+                                    <li class="rating__star"></li>
+                                    <li class="rating__star"></li>
+                                </ul>
+
+                                <span class="feedback-item__user-name">Семён</span>
+                                <span class="feedback-item__date">30.09.2017</span>
+                            </div>
+                            <div class="feedback-item__text">
+                                <p>Достойне кріплення за свої гроші. Монтажні отвори розташовані близько один до одного, що потребує уважного вимірювання для рівного розташування, монтажні болти з м'якого металу, на один раз. 27 дюйомвий монітор (10кг.) тримає міцно.</p>
+                                <p>Всі поворотні з'єднання мають приємну протидію при регулюванні, всі можуть затягуватись чи послаблятись, мають пластикові заглушки. В цілому товаром задоволений. Відправка в день оплати.</p>
+                                <p><strong class="strong">Достоинства: </strong>
+                                    Понравился комплект есть все винты как к стене так и к телевизору.
+                                </p>
+                                <p><strong class="strong">Недостатки: </strong>
+                                    Уровень который входит в комплект показывает ерунду.
+                                </p>
+                            </div>
+                            <ul class="feedback-item__photos">
+                                <li class="feedback-item__photo"><a href="img/item-img1.jpg" class="gallery-item"><img src="img/item-img1.jpg" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/item-img1.jpg" class="gallery-item"><img src="img/feedback-item2.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item3.png" class="gallery-item"><img src="img/feedback-item3.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                            </ul>
+                            <div class="feedback-item__menu-buttons">
+                                <button class="feedback-item__button-answer">Ответить</button>
+                                <button class="feedback-item__like">4</button>
+                                <button class="feedback-item__unlike">1</button>
+                            </div>
+                            <div class="feedback-item__answers">
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                                <div class="feedback-item__answer">
+                                    <div class="feedback-item__answer-header">
+                                        <span class="grey-text">Ответ:</span>
+                                        <span class="feedback-item__answer__user-name">Администратор</span>
+                                        <span class="feedback-item__date">30.09.2017</span>
+                                    </div>
+                                    <div class="feedback-item__answer-messege">
+                                        <p>Плохие отзывы пишут 18, 20 и 21-летние, а нормальные люди этим не занимаются.</p>
+                                        <p>Просто им неприятно, заело их. Я прекрасно помню всех этих посетителей, отлично помню.</p>
+                                        <p>И как они себя вели: всё по коридору слышно было!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="gray-dashed-link feedback-item__answer-show-more">Показать все ответы</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-main-menu__block">
+                    <div class="accessories-items">
+                        <h2 class="other-categories__header">Кабель и переходники</h2>
+                        <div class="accessories-items__item-box">
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accessories-items">
+                    <h2 class="other-categories__header">Полки</h2>
+                    <div class="accessories-items__item-box">
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="accessories-items__item">
+                            <a href="">
+                                <div class="accessories-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="accessories-items__item-like"></span>
+                                </div>
+                                <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="accessories-items">
+                        <h2 class="other-categories__header">Полки</h2>
+                        <div class="accessories-items__item-box">
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="accessories-items__item">
+                                <a href="">
+                                    <div class="accessories-items__item-photo">
+                                        <img src="img/the-same-item-1.png" alt="other-item">
+                                        <span class="accessories-items__item-like"></span>
+                                    </div>
+                                    <h3 class="accessories-itemss__item-name">iTech<br>CELB-22NL W</h3>
+                                    <div class="price">
+                                        <div class="price--actual">290<span class="currency">грн</span></div>
+                                        <div class="price--unactual">100<span class="currency">грн</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="col-md-8 col-sm-10">
                 <div class="item__feedback">
                     <button class="button leave-feedback__button">Оставить отзыв или фото</button>
@@ -501,16 +1395,9 @@
                                 </p>
                             </div>
                             <ul class="feedback-item__photos">
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/item-img1.jpg" class="gallery-item"><img src="img/item-img1.jpg" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/item-img1.jpg" class="gallery-item"><img src="img/feedback-item2.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item3.png" class="gallery-item"><img src="img/feedback-item3.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
-                                <li class="feedback-item__photo"><a data-effect="mfp-zoom-in" href="img/feedback-item4.png" class="gallery-item"><img src="img/feedback-item4.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/item-img1.jpg" class="gallery-item"><img src="img/item-img1.jpg" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/item-img1.jpg" class="gallery-item"><img src="img/feedback-item2.png" alt="image"></a></li>
+                                <li class="feedback-item__photo"><a href="img/feedback-item3.png" class="gallery-item"><img src="img/feedback-item3.png" alt="image"></a></li>
                             </ul>
                             <div class="feedback-item__menu-buttons">
                                 <button class="feedback-item__button-answer">Ответить</button>
@@ -586,6 +1473,10 @@
             </div>
         </div>
     </div>
+
+
+
+
     <!--Other categories-->
     <div class="container">
         <div class="row">
@@ -773,7 +1664,6 @@
 
 
     <!--U have look this-->
-
     <div class="container">
         <div class="row">
             <div class="col-md-24">
@@ -833,18 +1723,18 @@
                             </a>
                         </div>
                         <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="">
+                            <div class="history-items__item-photo">
+                                <img src="img/the-same-item-1.png" alt="other-item">
+                                <span class="history-items__item-like"></span>
+                            </div>
+                            <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                            <div class="price">
+                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                <div class="price--unactual">100<span class="currency">грн</span></div>
+                            </div>
+                        </a>
+                    </div>
                         <div class="history-items__item">
                             <a href="">
                                 <div class="history-items__item-photo">
@@ -910,98 +1800,6 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="history-items__item">
-                            <a href="">
-                                <div class="history-items__item-photo">
-                                    <img src="img/the-same-item-1.png" alt="other-item">
-                                    <span class="history-items__item-like"></span>
-                                </div>
-                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
-                                <div class="price">
-                                    <div class="price--actual">290<span class="currency">грн</span></div>
-                                    <div class="price--unactual">100<span class="currency">грн</span></div>
-                                </div>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -1056,11 +1854,42 @@
 <div class="popup-wrapper">
     <div class="popup delivery-and-payment">
         <div class="popup-panel">
-            <h2 class="popup-name">Lorem ipsum dolor.</h2>
+            <h2 class="popup-name">Доставка и оплата</h2>
             <a href="" class="popup-close"></a>
         </div>
 
-        <div class="popup-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam assumenda aut consectetur consequuntur dolor eligendi eum, ex explicabo fuga id modi obcaecati odit optio perspiciatis possimus provident quas quod saepe similique sit ullam veniam voluptate, voluptatem voluptatibus! Adipisci corporis, deserunt dolorem et facilis fugit illo labore natus, neque nihil saepe, veniam vitae voluptatem. Architecto blanditiis dolore, expedita hic iste porro quibusdam quos similique? Aperiam consequuntur cum illum impedit iure minus mollitia nisi nostrum, unde voluptatem. A alias beatae blanditiis, consectetur cum cumque dignissimos dolore doloribus ducimus enim fugiat harum illo, impedit in iure magnam, maxime nemo non nostrum numquam quia quis ratione rem repellendus similique tenetur ullam unde veniam voluptas voluptatem! Ab dolor ea exercitationem expedita facere ipsa magnam maxime minima modi nam natus neque nulla, omnis placeat, quisquam unde voluptates. Ab accusantium asperiores blanditiis consequatur dolorem, itaque laudantium magni nostrum, officiis quaerat quam quasi recusandae sint soluta suscipit totam voluptate voluptatem. Distinctio dolorem, eaque est hic magni neque placeat ullam. Adipisci aperiam aspernatur autem cum distinctio id impedit ipsa ipsum libero nemo neque nisi, nobis odio odit quae repellat sequi tenetur ullam vel velit. Accusantium adipisci alias, aliquam at beatae consectetur culpa debitis doloremque eos esse eveniet exercitationem, facere facilis hic in laboriosam maiores natus nesciunt quam quisquam repudiandae sit tenetur veritatis. Aliquid deleniti iste porro quisquam ullam veritatis? Adipisci assumenda distinctio dolore labore minima nihil numquam odio porro quas suscipit! Consectetur dolor molestias velit? A ab alias amet animi architecto consectetur deleniti doloribus ducimus ea earum eligendi enim, eos ex fuga illo in mollitia neque officiis, quas qui quia rem repellendus rerum saepe ut veniam vitae! Facilis fuga ipsam laborum nemo nobis officiis totam ut vitae. Amet autem consequatur culpa cum cupiditate deserunt distinctio doloremque ea eaque earum ex incidunt inventore laboriosam laudantium magnam maiores modi natus nisi nobis numquam officia quaerat quod sequi sint, soluta suscipit totam voluptatum! Adipisci amet beatae commodi cumque, cupiditate delectus dolores eum ex facere id incidunt ipsam iusto magni modi molestiae nam nihil nobis officiis porro quam quos reiciendis reprehenderit repudiandae sit sunt, suscipit ut voluptatem. A, accusamus architecto aspernatur atque commodi delectus deleniti earum ex excepturi expedita harum hic laborum magnam maiores molestiae mollitia nesciunt nostrum perspiciatis praesentium provident sunt ut veritatis vero voluptates voluptatum. Ab atque consectetur culpa dicta error et magnam non sint! Autem hic quod soluta. Accusamus accusantium, assumenda autem beatae dolorem eligendi eum iure neque odio placeat, possimus quia quis quo saepe, sequi totam vero! Ad asperiores expedita id maiores molestiae neque reprehenderit, sint? Aliquid beatae cupiditate esse eveniet excepturi exercitationem fugit, harum inventore, magnam modi molestiae numquam quae quam quas reiciendis totam voluptatibus? Aperiam architecto dicta dignissimos, ea eius eligendi itaque maxime nesciunt numquam odio officia quam, quia quos repellat saepe, similique sit ullam ut veniam voluptatum! Aliquid animi asperiores blanditiis cumque dolorem doloremque eaque enim error eum excepturi, exercitationem, fugiat impedit in iste iusto labore laudantium maiores minus molestias necessitatibus nemo neque officia perferendis placeat provident ratione rerum sapiente sint soluta tenetur totam velit voluptate, voluptatem. Ad corporis deleniti deserunt dolorum earum eum facilis odit, placeat quae reprehenderit sint, voluptatem. Accusantium amet aspernatur deleniti dignissimos enim et, impedit, in, nemo optio provident quasi sint. Ad, animi aperiam, dolore exercitationem omnis, optio quisquam rem repellendus sed temporibus unde veritatis? Aliquid amet architecto aspernatur commodi cumque delectus, deserunt distinctio eaque earum, eligendi ex laudantium nam nihil nisi numquam odit ratione repellat sapiente. Accusantium odit possimus sequi voluptatum? Asperiores autem incidunt iusto magni nulla similique voluptatibus. Alias amet animi aspernatur at autem commodi corporis, debitis dolore dolorem excepturi, illum iste labore molestias mollitia nulla odio officiis qui quos sapiente soluta unde vel voluptas? A aliquid animi architecto assumenda corporis delectus deserunt distinctio dolore doloribus eius et eum facilis id, iste laborum laudantium mollitia nemo nisi non numquam obcaecati perferendis possimus quae quaerat quas repellat rerum sed similique sunt, ut? Dicta error ipsa laudantium nemo pariatur possimus provident quasi, quos. Aperiam consequatur dolore eius enim explicabo fugiat, ipsa iure libero maiores nobis, omnis placeat reprehenderit repudiandae sint suscipit ut, velit vitae voluptas. Consequatur laboriosam necessitatibus perspiciatis repudiandae voluptas? Asperiores aut debitis dolorem illo illum ipsa natus nulla officia quas sed! Animi, architecto corporis cumque debitis doloribus, earum eius error ex facilis illo incidunt iste laboriosam libero minima obcaecati pariatur placeat porro quae quia quo rem saepe sit vel vitae voluptas. Ad blanditiis commodi dolore earum explicabo, hic nulla provident qui quidem sunt! Ab animi asperiores assumenda beatae dignissimos, distinctio dolor doloremque dolorum error fuga fugiat fugit illo iste laborum magnam modi molestiae nemo nesciunt nisi nostrum optio quis quos reprehenderit sequi sunt suscipit unde. Expedita incidunt inventore laboriosam obcaecati ratione. A aut autem cum iusto labore laudantium molestias mollitia nam natus, nemo neque nobis odio provident, quis repellendus reprehenderit sequi soluta tenetur voluptate voluptatibus! Consequuntur fugiat maiores natus.</div>
+        <div class="popup-content">
+            <h3 class="delvery-popup-h">Доставка и оплата по Украине:</h3>
+            <span>Бесплатная доставка по Украине для заказов от 500 грн!</span>
+            <p>важаемые покупатели, если сумма вашего заказа составит 500 грн. и выше, и оплата товара будет осуществлена по предоплате, доставку товара на ваш склад "НовойПочты" или "Укрпочты" мы оплатим за вас.</p>
+            <p>Также, мы оплатим доставку по Украине при отправке наложенным платежом (оплата товара при получении на вашем складе), но в таком случае, стоимость возврата денег на наш склад оплачиваете вы, что составит 20 грн. +2% от стоимости товара.</p>
+            <p>Доставка по Украине заказов до 500 грн. Если сумма вашего заказа не превышает 500 грн. доставка осуществляется только транспортными компаниями "НоваяПочта" и “УкрПочта”.</p>
+            <h3 class="address-popup-h">Адресная доставка:</h3>
+            <p>После оформления заказа, с вами свяжется наш менеджер и уточнит удобное для вас время доставки.<br>
+                Стоимость доставки – от 50 грн.</p>
+            <h3 class="y-popup-h">Самовывоз со склада</h3>
+            <p>г. Днипро, ул. Авиационная д. 39. Обязательно согласуйте время своего визита и наличие товара с нашим менеджером.</p>
+
+            <p>
+                Предоплату товара вы можете произвести на карточку ПриватБанка<br>
+                №4731 2171 1083 4932, получатель Оспанов А.Р.<br>
+                ФОП Оспанов А.Р. ЄДРПОУ: 2912700657<br>
+                Види діяльності: 47.91<br>
+                Роздрібна торгівля, що здійснюється фірмами поштового замовлення або через мережу Інтернет в Україні.<br>
+                Оплата товара производится только в национальной валюте Украины!
+            </p>
+        </div>
+    </div>
+
+    <div class="popup main-slider-popup">
+        <div class="popup-panel">
+            <h2 class="popup-name">Доставка и оплата</h2>
+            <a href="" class="popup-close"></a>
+        </div>
+
+        <div class="popup-content">
+
+        </div>
     </div>
 </div>
 
