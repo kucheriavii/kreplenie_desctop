@@ -1,5 +1,5 @@
 $(function() {
-
+    filterPrice();
     mainSliderPopup();
 
 
@@ -29,6 +29,7 @@ $(function() {
     rating();
     item_counter();
     showMore();
+    catalogFilter();
     scroolBar();
     horizontalScrollItem();
     popup();
@@ -257,14 +258,14 @@ var item_counter = function(){
 var showMore = function(){
     var text,
         feedbacks_height;// = parseInt($('.feedback-item__answers').height());
-    $(document).on('click', '.show-more', function(e){
+    $(document).on('click', '.item-main-menu__block .show-more', function(e){
        e.preventDefault();
        e.stopPropagation();
        text = $(this).text();
        $('.item-main-menu__block-description').animate({height:'100%'});
        $(this).removeClass("show-more").addClass('show-less').text('Скрыть текст');
     });
-    $(document).on('click', '.show-less', function(e){
+    $(document).on('click', '.item-main-menu__block .show-less', function(e){
        e.preventDefault();
        e.stopPropagation();
        $('.item-main-menu__block-description').css({height:'200px'});
@@ -288,6 +289,34 @@ var showMore = function(){
         answers.css({height:feedbacks_height});
         $(this).removeClass("feedback-item__answer-show-less").addClass('feedback-item__answer-show-more').text(text);
     });
+
+    //filter options showmore (affter 5 elements)
+    $('.filter-option').each(function(){
+        if($(this).children('.filter-options__label').length>5){
+            $(this).children('.filter-options__label').slice(5).css('display','none');
+            $('<span class="gray-dashed-link show-more">Показать все</span>').appendTo($(this))
+        }
+        $(document).on('click', '.filter-option .show-more', function(e){
+            $(this).parents('.filter-option').children('.filter-options__label').removeAttr('style');
+            $(this).text('скрыть елементы').removeClass('show-more').addClass('show-less');
+        });
+        $(document).on('click', '.filter-option .show-less', function(e){
+            $(this).parents('.filter-option').children('.filter-options__label').slice(5).css('display','none');
+            $(this).text('Показать все').removeClass('show-less').addClass('show-more')
+        })
+    })
+
+    //filter all options hide/show
+    $(document).on('click','.filter-header-scroll',function(){
+        if($(this).parents('.filter-option').children('.filter-options__label').is(':visible')){
+            $(this).parents('.filter-option').addClass('closed').children('.show-more').remove();
+            $(this).parents('.filter-option').children('.show-less').remove();
+            $(this).parents('.filter-option').children('.filter-options__label').slideUp(300);
+        } else {
+            $(this).parents('.filter-option').removeClass('closed').children('.filter-options__label').slice(0,5).slideDown(300);
+            $('<span class="gray-dashed-link show-more">Показать все</span>').appendTo($(this).parents('.filter-option'))
+        }
+    })
 };
 
 var horizontalScrollItem = function (e) {
@@ -407,4 +436,114 @@ var mainSliderPopup = function(){
     })
 };
 
-//slider main
+var filterPrice = function(){
+    var minimumRange = parseInt($('.amount-left').val());
+    var maximumRange = parseInt($('.amount-right').val());
+   // maximumRange>0?maximumRange:parseInt($('.amount-right').val());
+    var amountleft = $(".amount-left");
+    var amountright = $(".amount-right");
+    $( ".slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: maximumRange,
+        values: [ minimumRange, maximumRange ],
+        slide: function( event, ui ) {
+            amountleft.val(ui.values[ 0 ]);
+            amountright.val(ui.values[ 1 ]);
+        }
+    });
+    amountleft.val( $( ".slider-range" ).slider( "values", 0 ));
+    amountright.val( $( ".slider-range" ).slider( "values", 1 ));
+    $('body').append('<a href="#" id="go-top" title="Вверх"></a>');
+
+
+    //хендлер введения минимального значения для ползунка в фильтре каталога
+    $(".amount-left").keyup(function(){
+        var minimumRange = parseInt(amountleft.val());
+        var maximumRange = parseInt(amountright.val());
+        //определение минимальной цены в фильтре и приближения к ползунку максимальной цены
+        if($.isNumeric(minimumRange) && (maximumRange-minimumRange)>0 ){
+            $( ".slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: maximumRange,
+                values: [ minimumRange, maximumRange ],
+                slide: function( event, ui ) {
+                    amountleft.val(ui.values[ 0 ]);
+                    amountright.val(ui.values[ 1 ]);
+                }
+            });
+            amountleft.val( $( ".slider-range" ).slider( "values", 0 ));
+            amountright.val( $( ".slider-range" ).slider( "values", 1 ));
+        } else {
+            $( ".slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: maximumRange,
+                values: [ 0, maximumRange ],
+                slide: function( event, ui ) {
+                    amountleft.val(ui.values[ 0 ]);
+                    amountright.val(ui.values[ 1 ]);
+                }
+            });
+            amountleft.val( $( ".slider-range" ).slider( "values", 0 ));
+            amountright.val( $( ".slider-range" ).slider( "values", 1 ));
+        }
+    });
+    //определение максимальной цены в фильтре и приближения к ползунку минимальной цены
+    $(".amount-right").blur(function(){
+        var minimumRange = parseInt(amountleft.val());
+        var maximumRange = parseInt(amountright.val());
+        if($.isNumeric(maximumRange) && (maximumRange-minimumRange)>0 ){
+            $( ".slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: maximumRange,
+                values: [ minimumRange, maximumRange ],
+                slide: function( event, ui ) {
+                    amountleft.val(ui.values[ 0 ]);
+                    amountright.val(ui.values[ 1 ]);
+                }
+            });
+            amountleft.val( $( ".slider-range" ).slider( "values", 0 ));
+            amountright.val( $( ".slider-range" ).slider( "values", 1 ));
+        } else {
+            maximumRange = 9999;
+            $( ".slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: maximumRange,
+                values: [ minimumRange, maximumRange ],
+                slide: function( event, ui ) {
+                    amountleft.val(ui.values[ 0 ]);
+                    amountright.val(ui.values[ 1 ]);
+                }
+            });
+            amountleft.val( $( ".slider-range" ).slider( "values", 0 ));
+            amountright.val( $( ".slider-range" ).slider( "values", 1 ));
+        }
+    });
+};
+
+var catalogFilter = function(e){
+  $(document).on('click', '.filter-result__button-refresh', function(e){
+      e.preventDefault();
+      $(this).parents('.filter-options').find('input:checked').prop('checked', false);
+  });
+
+    $(document).on('click', '.filter-result__button-ok', function(e){
+        var selectedInputs = $(this).parents('.filter-options').find('input:checked').parents('.filter-options__label');
+        var selectedText = [];
+        $('.filter-selected-params__block .filter-selected-params__label').remove();
+        for(i=0;i<selectedInputs.length;i++){
+              selectedText[i] = $(this).parents('.filter-options').find('input:checked').eq(i).parents('.filter-options__label').text()
+              $("<label class='filter-selected-params__label'><input type='checkbox' name='filter-selected-params' checked>"+selectedText[i]+'</label>').appendTo('.filter-selected-params__block');
+          }
+    });
+
+    $(document).on('click','.filter-selected-params__reset-params',function(e){
+        e.preventDefault();
+       $(this).parents('.filter-selected-params').find('.filter-selected-params__label').remove();
+    })
+};
+

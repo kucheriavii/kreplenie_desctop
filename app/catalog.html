@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Карточка товара</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+	<header>
+		<!--top menu-->
+		<div class="bgc-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-18 col-sm-18">
+						<ul class="main-menu">
+							<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link delivery-and-payment__link">Доставка и оплата</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
+							<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-sm-6">
+						<ul class="main-menu--right">
+							<li class="main-menu__item--right"><a href="#" class="main-menu__link">Вход</a></li>
+							<li class="main-menu__item--right"><a href="#" class="main-menu__link">Регистрация</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--logo & contacts-->
+		<div class="logo-and-contacts">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-xs-6">
+						<div class="logo">
+							<img src="img/logo-lg.png" alt="kreplenie-tv">
+						</div>
+					</div>
+					<div class="col-lg-18 col-xs-18">
+						<div class="contact-info">
+							<ul class="phones-block">
+								<li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
+								<li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
+								<li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+							</ul>
+
+							<p class="work-time">Пн – Пт: 9:00–18:00, Сб: 8:00–12:00 Воскресенье: выходной
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--header-menu-->
+		<div class="header-menu">
+			<div class="container">
+				<div class="row">
+					<div class="header-menu__wrapper">
+						<ul class="drop-menu">
+							<li class="drop-menu__item active"><a href="#">Каталог товаров</a></li>
+							<li class="drop-menu__item "><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+							<li class="drop-menu__item"><a href="#">Каталог</a></li>
+						</ul>
+						<div class="search-box">
+							<input class="search-box__input" type="text" name="search" placeholder="Поиск товара">
+							<button class="search-box-button">Найти</button>
+						</div>
+						<ul class="header-buttons">
+							<li class="header-buttons__item promo-button"><a href="#" class="header-buttons__link">Акции!<span class="counter"></span></a></li>
+							<li class="header-buttons__item settings-button"><a href="#" class="header-buttons__link"><img
+									src="img/settings-icon.png" alt=""><span class="counter">12</span></a></li>
+							<li class="header-buttons__item likes-button"><a href="#" class="header-buttons__link"><img
+									src="img/heards-icon.png" alt=""><span class="counter">1</span></a></li>
+							<li class="header-buttons__item basket-button"><a href="#" class="header-buttons__link"><img
+									src="img/basket-icon.png" alt=""><span class="counter">1212</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Breadcrumbs-->
+		<div class="container">
+			<div class="row">
+				<div class="com-lg-24 col-sm-24">
+					<ul class="breadcrumbs">
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>
+						<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Крепления для ТВ и мониторов</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+    <!--ITEM SLIDER-->
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-24">
+				<div class="page-header">
+                    <h1>Крепления для ТВ и мониторов:</h1>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-24">
+                <div class="catalog-wrapper">
+                    <div class="filter-wrapper">
+                        <div class="filter-result">
+                            <p class="filter-result__text">Подобрано 7 из 603</p>
+
+                            <div class="filter-selected-params">
+                                <form action="#">
+                                    <p class="filter-selected-params__text">Выбранные параметры:</p>
+                                    <div class="filter-selected-params__block">
+                                        <label class="filter-selected-params__label">
+                                            <input type="checkbox" name="filter-selected-params">Some parameter
+                                        </label>
+                                        <label class="filter-selected-params__label">
+                                            <input type="checkbox" name="filter-selected-params">Some parameter
+                                        </label>
+                                        <label class="filter-selected-params__label">
+                                            <input type="checkbox" name="filter-selected-params">Some parameter
+                                        </label>
+                                    </div>
+                                    <button class="filter-selected-params__reset-params">Сбросить фильтры</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="filter-options">
+                            <form action="#">
+                                <div class="filter-price">
+                                    <h4>Цена</h4>
+                                    <form action="#">
+                                        <div class="form-price-slider">
+                                            <input type="text" name="name" class="amount-left" value="1000">
+                                            <span class="to"></span>
+                                            <input type="text" name="name" class="amount-right" value="9999">
+                                        </div>
+                                        <div class="slider-range"></div>
+                                    </form>
+                                </div>
+
+                                <div class="filter-our-propositions filter-option">
+                                    <div class="filter-header">
+                                        <h3 class="filter-header-text">Наши предложения</h3>
+                                        <span class="filter-header-scroll"></span>
+                                    </div>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                </div>
+                                <div class="filter-brand filter-option">
+                                    <div class="filter-header">
+                                        <h3 class="filter-header-text">Бренд</h3>
+                                        <div class="filter-header-info">
+                                            <div class="filter-header-info-container">
+                                                Всплывающее окно описания свойства.
+                                            </div>
+                                        </div>
+                                        <span class="filter-header-scroll"></span>
+                                    </div>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                </div>
+                                <div class="filter-type filter-option">
+                                    <div class="filter-header">
+                                        <h3 class="filter-header-text">Тип</h3>
+                                        <span class="filter-header-scroll"></span>
+                                    </div>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter
+                                    </label>
+                                </div>
+                                <div class="filter-color filter-option">
+                                    <div class="filter-header">
+                                        <h3 class="filter-header-text">Цвет</h3>
+                                        <span class="filter-header-scroll"></span>
+                                    </div>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter1
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter2
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter3
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter4
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter5
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter6
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter7
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter8
+                                    </label>
+                                </div>
+                                <div class="filter-size filter-option">
+                                    <div class="filter-header">
+                                        <h3 class="filter-header-text">Максимальная диагональ
+                                            телевизора</h3>
+                                        <span class="filter-header-scroll"></span>
+                                    </div>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter1
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter2
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter3
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter4
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter5
+                                    </label>
+                                </div>
+                                <div class="filter-vesa-size filter-option">
+                                    <div class="filter-header">
+                                        <h3 class="filter-header-text">VESA поддерживаемые
+                                            размеры</h3>
+                                        <span class="filter-header-scroll"></span>
+                                    </div>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter1
+                                    </label>
+                                    <label class="filter-options__label">
+                                        <input type="checkbox" name="filter-options-params">Some parameter2
+                                    </label>
+                                </div>
+
+                                <p class="filter-result__text-down">Подобрано 7 товаров из 603</p>
+
+                                <div class="filter-result__button-panel">
+                                    <button class="filter-result__button-refresh">Очистить</button>
+                                    <button class="filter-result__button-ok">Показать</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                    <div class="catalog">
+                        <div class="catalog__banners">
+                            <ul class="catalog__banners-list">
+                                <li class="catalog__banners-item">
+                                    <a href="#" class="catalog__banners-link">asasas</a>
+                                </li>
+                                <li class="catalog__banners-item">
+                                    <a href="#" class="catalog__banners-link"></a>
+                                </li>
+                                <li class="catalog__banners-item">
+                                    <a href="#" class="catalog__banners-link"></a>
+                                </li>
+                                <li class="catalog__banners-item">
+                                    <a href="#" class="catalog__banners-link"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </div>
+
+    <!--Other categories-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="other-categories">
+                    <h2 class="other-categories__header">Товары из других категорий</h2>
+                    <ul class="other-categories__menu">
+                        <li class="other-categories__menu-item active">
+                            <img src="img/others-cat-item1.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Потолочные<br>крепление<br>для телевизоров</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item2.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Настольные<br>крепления<br>для мониторов</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item3.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Т2<br>телевидение</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item4.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Полки<br>для тюнера</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item5.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Кабель<br>и переходники</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item6.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Аксессуары</span>
+                        </li>
+                    </ul>
+                    <div class="other-categories__item-box active">
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--U have look this-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="history-items">
+                    <h2 class="other-categories__header">Вы уже смотрели</h2>
+                    <div class="history-items__item-box">
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                        <a href="">
+                            <div class="history-items__item-photo">
+                                <img src="img/the-same-item-1.png" alt="other-item">
+                                <span class="history-items__item-like"></span>
+                            </div>
+                            <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                            <div class="price">
+                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                <div class="price--unactual">100<span class="currency">грн</span></div>
+                            </div>
+                        </a>
+                    </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="empty"></div>
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-sm-7">
+				<button class="button button--mobile-version">Мобильная версия сайта</button>
+			</div>
+			<div class="col-md-6 col-sm-7">
+				<ul class="main-menu--footer">
+					<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка и оплата</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<div class="contact-info justify-content-end">
+					<ul class="phones-block phones--footer">
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+					</ul>
+
+					<p class="work-time">Пн – Пт: 9:00–18:00<br> Сб: 8:00–12:00<br> Воскресенье: выходной
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="footer-copyright">
+				<div class="copyright">2018 © Kreplenie-TV.com.ua</div>
+				<div class="our-logo">
+					<img src="img/akweb-logo.png" alt="AKWEB development">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<!--popups-->
+<div class="popup-wrapper">
+    <div class="popup delivery-and-payment">
+        <div class="popup-panel">
+            <h2 class="popup-name">Доставка и оплата</h2>
+            <a href="" class="popup-close"></a>
+        </div>
+
+        <div class="popup-content">
+            <h3 class="delvery-popup-h">Доставка и оплата по Украине:</h3>
+            <span>Бесплатная доставка по Украине для заказов от 500 грн!</span>
+            <p>важаемые покупатели, если сумма вашего заказа составит 500 грн. и выше, и оплата товара будет осуществлена по предоплате, доставку товара на ваш склад "НовойПочты" или "Укрпочты" мы оплатим за вас.</p>
+            <p>Также, мы оплатим доставку по Украине при отправке наложенным платежом (оплата товара при получении на вашем складе), но в таком случае, стоимость возврата денег на наш склад оплачиваете вы, что составит 20 грн. +2% от стоимости товара.</p>
+            <p>Доставка по Украине заказов до 500 грн. Если сумма вашего заказа не превышает 500 грн. доставка осуществляется только транспортными компаниями "НоваяПочта" и “УкрПочта”.</p>
+            <h3 class="address-popup-h">Адресная доставка:</h3>
+            <p>После оформления заказа, с вами свяжется наш менеджер и уточнит удобное для вас время доставки.<br>
+                Стоимость доставки – от 50 грн.</p>
+            <h3 class="y-popup-h">Самовывоз со склада</h3>
+            <p>г. Днипро, ул. Авиационная д. 39. Обязательно согласуйте время своего визита и наличие товара с нашим менеджером.</p>
+
+            <p>
+                Предоплату товара вы можете произвести на карточку ПриватБанка<br>
+                №4731 2171 1083 4932, получатель Оспанов А.Р.<br>
+                ФОП Оспанов А.Р. ЄДРПОУ: 2912700657<br>
+                Види діяльності: 47.91<br>
+                Роздрібна торгівля, що здійснюється фірмами поштового замовлення або через мережу Інтернет в Україні.<br>
+                Оплата товара производится только в национальной валюте Украины!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--/popups-->
+	<script src="js/scripts.min.js"></script>
+
+<!--individual page js-->
+
+</body>
+</html>
