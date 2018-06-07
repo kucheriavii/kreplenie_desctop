@@ -42,6 +42,8 @@ gulp.task('js', function() {
 		'app/libs/slick/slick.js',
 		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+		'app/libs/ui/jquery-ui.min.js',
+		'app/libs/ui/jquery.ui.touch-punch.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

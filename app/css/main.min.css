@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*User vars*/
 @font-face {
   font-family: "OpenSans-Bold";
@@ -4760,10 +4761,11 @@ span.feedback {
   margin: 0;
   padding: 0;
   height: 60px;
-  width: 374px;
+  max-width: 374px;
   background-color: #eee;
   display: inline-block;
-  margin-right: 10px; }
+  margin-right: 10px;
+  overflow: hidden; }
   .catalog__banners-item:last-child {
     margin-right: 0; }
 
@@ -4774,6 +4776,154 @@ span.feedback {
   width: 100%;
   text-align: center;
   line-height: 60px; }
+
+.catalog__sort-item {
+  margin-right: 16px; }
+
+.catalog__sort-link {
+  font: 12px 14px/18px "OpenSans-SemiBold", sans-serif;
+  color: #bdbdbd;
+  height: 50px;
+  line-height: 50px; }
+  .catalog__sort-link:after {
+    content: "";
+    display: inline-block;
+    background: url("../img/sort-arrow-unactive-icon.png");
+    width: 4px;
+    height: 9px;
+    margin-left: 4px; }
+  .catalog__sort-link.active {
+    color: #212121; }
+    .catalog__sort-link.active:after {
+      background: url("../img/sort-arrow-icon.png"); }
+
+.catalog__items-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 56px; }
+
+.catalog__item {
+  width: 250px;
+  height: 450px;
+  overflow: hidden;
+  margin-right: 5px; }
+  .catalog__item-img-wrap {
+    height: 300px;
+    position: relative; }
+  .catalog__item-stickers-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .catalog__item-sticker {
+    display: block; }
+    .catalog__item-sticker .catalog__item-link {
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      margin-bottom: 2px;
+      padding-left: 5px;
+      padding-right: 5px; }
+  .catalog__item-img {
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+  .catalog__item-name {
+    font: 14px "OpenSans-Bold", sans-serif;
+    height: 28px;
+    line-height: 14px;
+    margin: 0; }
+  .catalog__item-code {
+    font-size: 12px; }
+    .catalog__item-code:before {
+      content: "Код: "; }
+  .catalog__item-rating-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .catalog__item-rating-wrapper .rating-catalog .rating__star {
+      margin-right: 3px; }
+      .catalog__item-rating-wrapper .rating-catalog .rating__star:last-child {
+        margin-right: 0; }
+  .catalog__item-feedback-counter {
+    font-size: 12px;
+    margin-left: 5px; }
+  .catalog__item-price {
+    margin-top: 5px;
+    height: 22px; }
+    .catalog__item-price .price--actual {
+      font-size: 18px; }
+    .catalog__item-price .price--unactual {
+      font-size: 12px; }
+      .catalog__item-price .price--unactual:after {
+        top: 7px; }
+  .catalog__item .item-buy-panel {
+    margin: 10px 0 0 0;
+    border: none; }
+    .catalog__item .item-buy-panel .button--buy {
+      margin: 0;
+      margin-right: 8px;
+      font-size: 16px; }
+      .catalog__item .item-buy-panel .button--buy.active {
+        color: #212121;
+        background-image: url("../img/basket-red-icon.png");
+        background-repeat: no-repeat;
+        background-position: 3px center;
+        background-color: transparent; }
+    .catalog__item .item-buy-panel .button--empty {
+      font-size: 12px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 0; }
+    .catalog__item .item-buy-panel .item-setings {
+      margin-right: 8px; }
+
+.catalog__items-footer {
+  display: block;
+  width: 287px;
+  margin: 0 auto; }
+
+.catalog__items-download-more {
+  width: 287px;
+  height: 50px;
+  font: 12px "OpenSans-Bold", sans-serif;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  border: 1px solid #eee;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer; }
+  .catalog__items-download-more:hover, .catalog__items-download-more:active, .catalog__items-download-more:focus {
+    outline: 0; }
+  .catalog__items-download-more:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    margin-left: 10px;
+    background-image: url("../img/refresh-icon.png");
+    width: 21px;
+    height: 50px;
+    background-position: 0 50%;
+    background-repeat: no-repeat; }
 
 /***footer***/
 .empty {
@@ -4847,6 +4997,15 @@ span.feedback {
     line-height: 38px;
     padding: 0 32px;
     margin: auto 20px; }
+  .button--empty {
+    font-size: 16px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 32px;
+    margin: auto 20px;
+    background: #bdbdbd; }
+    .button--empty:hover, .button--empty:active, .button--empty:focus {
+      background: #bdbdbd; }
 
 .info-item {
   background-image: url("../img/info-icon.png");
@@ -5025,11 +5184,48 @@ span.feedback {
     display: block;
     background-image: url("../img/left-arrow-icon.png"); }
 
+.pagenav-item {
+  display: block;
+  width: 60px;
+  height: 50px;
+  border: 1px solid #eee;
+  border-right: none; }
+  .pagenav-item:first-child {
+    -webkit-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px; }
+  .pagenav-item:last-child {
+    -webkit-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
+    border-right: 1px solid #eee; }
+
+.pagenav-button {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: 18px "OpenSans-Bold", sans-serif; }
+  .pagenav-button:hover, .pagenav-button:focus, .pagenav-button:active {
+    outline: 0; }
+  .pagenav-button.active {
+    background: #eee;
+    color: #f44336; }
+
 /*************MODYFIRES******************/
 .bgc-grey {
   background-color: #eee; }
 
-.menu-ex, .header-buttons, .breadcrumbs, .item-main-menu, .feedback-item__photos, .other-categories__menu, .catalog__banners-list {
+.bgc-red {
+  background-color: #f44336; }
+
+.bgc-blue {
+  background-color: #1e88e5; }
+
+.bgc-green {
+  background-color: #6bd519; }
+
+.menu-ex, .header-buttons, .breadcrumbs, .item-main-menu, .feedback-item__photos, .other-categories__menu, .catalog__banners-list, .catalog__sort-panel, .pagenav {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

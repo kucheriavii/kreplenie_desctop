@@ -1691,10 +1691,11 @@ span.feedback{
 		margin: 0;
 		padding: 0;
 		height: 60px;
-		width: 374px;
+		max-width: 374px;
 		background-color: #eee;
 		display: inline-block;
 		margin-right: 10px;
+		overflow: hidden;
 		&:last-child{
 			margin-right: 0;
 		}
@@ -1706,6 +1707,172 @@ span.feedback{
 		width: 100%;
 		text-align: center;
 		line-height: 60px;
+	}
+}
+.catalog__{
+	&sort-panel{
+		@extend .menu-ex;
+	}
+	&sort-item{
+		margin-right: 16px;
+	}
+	&sort-link{
+		font: 12px $font-main;
+		color: #bdbdbd;
+		height: 50px;
+		line-height: 50px;
+		&:after{
+			content: "";
+			display: inline-block;
+			background: url("../img/sort-arrow-unactive-icon.png");
+			width: 4px;
+			height: 9px;
+			margin-left: 4px;
+		}
+		&.active{
+			color: #212121;
+			&:after{
+				background: url("../img/sort-arrow-icon.png");
+			}
+		}
+	}
+}
+.catalog__items-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-bottom: 56px;
+}
+.catalog__item{
+	width: 250px;
+	height: 450px;
+	overflow: hidden;
+	margin-right: 5px;
+	&-img-wrap{
+		height: 300px;
+		position: relative;
+	}
+	&-stickers-wrap{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	&-sticker{
+		display: block;
+		.catalog__item-link{
+			border-radius: 5px;
+			margin-bottom: 2px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+	&-img{
+		display: block;
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&-name{
+		font: 14px "OpenSans-Bold", sans-serif;
+		height: 28px;
+		line-height: 14px;
+		margin: 0;
+	}
+	&-code{
+		font-size: 12px;
+		&:before{
+			content: "Код: ";
+		}
+	}
+	&-rating-wrapper{
+		display: flex;
+		.rating-catalog .rating__star{
+			margin-right: 3px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	&-feedback-counter{
+		font-size: 12px;
+		margin-left: 5px;
+	}
+	&-price{
+		margin-top: 5px;
+		height: 22px;
+		.price--actual{
+			font-size: 18px;
+		}
+		.price--unactual{
+			font-size: 12px;
+			&:after{
+				top: 7px;
+			}
+		}
+	}
+	.item-buy-panel{
+		margin: 10px 0 0 0;
+		border: none;
+		.button--buy{
+			margin: 0;
+			margin-right: 8px;
+			font-size: 16px;
+			&.active{
+				color: #212121;
+				background-image: url("../img/basket-red-icon.png");
+				background-repeat: no-repeat;
+				background-position: 3px center;
+				background-color: transparent;
+			}
+		}
+		.button--empty{
+			font-size: 12px;
+			padding-left: 5px;
+			padding-right: 5px;
+			margin: 0;
+		}
+		.item-setings{
+			margin-right: 8px;
+		}
+	}
+
+}
+.catalog__items-footer{
+	display: block;
+	width: 287px;
+	margin: 0 auto;
+}
+.catalog__items-download-more{
+	width: 287px;
+	height: 50px;
+	font: 12px "OpenSans-Bold", sans-serif;
+	text-align: center;
+	line-height: 50px;
+	display: inline-block;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	background-color: transparent;
+	position: relative;
+	margin-bottom: 12px;
+	cursor: pointer;
+	&:hover, &:active, &:focus{
+		outline: 0;
+	}
+	&:after{
+		content: "";
+		display: inline-block;
+		position: absolute;
+		margin-left: 10px;
+		background-image: url("../img/refresh-icon.png");
+		width: 21px;
+		height: 50px;
+		background-position: 0 50%;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -1782,7 +1949,17 @@ span.feedback{
 		line-height: 38px;
 		padding: 0 32px;
 		margin: auto 20px;
-
+	}
+	&--empty{
+		font-size: 16px;
+		height: 38px;
+		line-height: 38px;
+		padding: 0 32px;
+		margin: auto 20px;
+		background: #bdbdbd;
+		&:hover, &:active, &:focus{
+			background: #bdbdbd;
+		}
 	}
 }
 .info-item{
@@ -1962,10 +2139,51 @@ span.feedback{
 		background-image: url("../img/left-arrow-icon.png");
 	}
 }
-
+.pagenav{
+	@extend .menu-ex;
+	&-item{
+		display: block;
+		width: 60px;
+		height: 50px;
+		border: 1px solid #eee;
+		border-right: none;
+		&:first-child{
+			border-radius: 4px 0 0 4px;
+		}
+		&:last-child{
+			border-radius: 0 4px 4px 0;
+			border-right: 1px solid #eee;
+		}
+	}
+	&-button{
+		height: 100%;
+		width: 100%;
+		display: block;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		font: 18px "OpenSans-Bold", sans-serif;
+		&:hover, &:focus, &:active{
+			outline: 0;
+		}
+		&.active{
+			background: #eee;
+			color: $accent;
+		}
+	}
+}
 	/*************MODYFIRES******************/
 .bgc-grey{
 	background-color: #eee;
+}
+.bgc-red{
+	background-color: #f44336;
+}
+.bgc-blue{
+	background-color: #1e88e5;
+}
+.bgc-green{
+	background-color: #6bd519;
 }
 .menu-ex{
 	display: flex;
