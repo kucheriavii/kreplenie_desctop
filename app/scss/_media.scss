@@ -80,6 +80,21 @@
   .contact-info{
     margin-top: -4px;
   }
+  /*catalog*/
+  .filter-wrapper{
+    min-width: 247px;
+    width: 247px;
+  }
+  .catalog__item{
+    margin-right: 0;
+    margin-left: 9px;
+  }
+  .phones-block{
+    width: 48%;
+  }
+  .work-time{
+    width: 52%;
+  }
 }
 
 // ≥1024px

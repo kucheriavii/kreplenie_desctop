@@ -3255,7 +3255,12 @@ a, a:hover, a:active, a:focus {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
+
+.search-box .catalog__item-link:hover {
+  background-color: rgba(100, 100, 100, 0.1);
+  display: block; }
 
 .search-box__input {
   width: 575px;
@@ -3269,36 +3274,38 @@ a, a:hover, a:active, a:focus {
           border-bottom-right-radius: 0;
   -webkit-border-top-right-radius: 0;
           border-top-right-radius: 0;
-  text-indent: 24px;
-  padding-left: 8px; }
+  text-indent: 30px;
+  /*padding-left: 8px;background-image: url("../img/search-icon.png");
+	background-repeat: no-repeat;
+	background-position: 8px 50%;*/ }
   .search-box__input::-webkit-input-placeholder {
     background-image: url("../img/search-icon.png");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 6px 50%;
     font: 14px "OpenSans-SemiBold", sans-serif;
     color: #c7c7cc; }
   .search-box__input::-moz-placeholder {
     background-image: url("../img/search-icon.png");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 6px 50%;
     font: 14px "OpenSans-SemiBold", sans-serif;
     color: #c7c7cc; }
   .search-box__input:-ms-input-placeholder {
     background-image: url("../img/search-icon.png");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 6px 50%;
     font: 14px "OpenSans-SemiBold", sans-serif;
     color: #c7c7cc; }
   .search-box__input::-ms-input-placeholder {
     background-image: url("../img/search-icon.png");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 6px 50%;
     font: 14px "OpenSans-SemiBold", sans-serif;
     color: #c7c7cc; }
   .search-box__input::placeholder {
     background-image: url("../img/search-icon.png");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 6px 50%;
     font: 14px "OpenSans-SemiBold", sans-serif;
     color: #c7c7cc; }
 
@@ -3316,6 +3323,61 @@ a, a:hover, a:active, a:focus {
   .search-box-button:hover, .search-box-button:active, .search-box-button:focus {
     outline: 0;
     cursor: pointer; }
+
+.search-box__result {
+  display: none;
+  position: absolute;
+  top: 46px;
+  left: 40px;
+  background: #fff;
+  z-index: 2;
+  -webkit-box-shadow: -1px 3px 6px rgba(88, 77, 77, 0.8);
+          box-shadow: -1px 3px 6px rgba(88, 77, 77, 0.8);
+  width: 400px; }
+  .search-box__result .catalog__item {
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #eee; }
+  .search-box__result .catalog__item-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 10px; }
+  .search-box__result .catalog__item-img-wrap {
+    height: 100%;
+    width: 60px;
+    float: left; }
+  .search-box__result .catalog__item-name {
+    font: 14px "OpenSans-Bold", sans-serif;
+    height: 16px;
+    line-height: 14px;
+    margin: 0;
+    width: 240px;
+    margin-left: 60px;
+    overflow: hidden; }
+  .search-box__result .catalog__item-rating-wrapper {
+    display: none !important; }
+  .search-box__result .catalog__item-price {
+    display: block; }
+    .search-box__result .catalog__item-price .price--actual {
+      display: inline-block; }
+    .search-box__result .catalog__item-price .price--unactual {
+      display: inline-block; }
+  .search-box__result .item-buy-panel {
+    display: none; }
+  .search-box__result .catalog__item-code {
+    display: block;
+    margin: 0; }
+  .search-box__result .catalog__item-price {
+    margin-top: 2px;
+    height: 22px; }
+  .search-box__result .show-more, .search-box__result .show-less {
+    display: block;
+    margin: 19px auto;
+    text-align: center;
+    clear: both;
+    width: 194px; }
 
 .header-buttons {
   position: absolute;
@@ -4815,7 +4877,7 @@ span.feedback {
   width: 250px;
   height: 450px;
   overflow: hidden;
-  margin-right: 5px; }
+  margin-right: 6px; }
   .catalog__item-img-wrap {
     height: 300px;
     position: relative; }
@@ -4828,13 +4890,17 @@ span.feedback {
     margin: 0;
     padding: 0; }
   .catalog__item-sticker {
-    display: block; }
+    display: block;
+    font: 12px "OpenSans-SemiBold";
+    margin-bottom: 1px;
+    padding: 1px; }
     .catalog__item-sticker .catalog__item-link {
       -webkit-border-radius: 5px;
               border-radius: 5px;
       margin-bottom: 2px;
       padding-left: 5px;
-      padding-right: 5px; }
+      padding-right: 5px;
+      color: #fff; }
   .catalog__item-img {
     display: block;
     -o-object-fit: contain;
@@ -4874,24 +4940,37 @@ span.feedback {
         top: 7px; }
   .catalog__item .item-buy-panel {
     margin: 10px 0 0 0;
-    border: none; }
+    border: none;
+    height: 26px; }
+    .catalog__item .item-buy-panel .item-setings, .catalog__item .item-buy-panel .item-likes {
+      height: 26px;
+      -webkit-background-size: 16px 16px;
+              background-size: 16px; }
     .catalog__item .item-buy-panel .button--buy {
       margin: 0;
       margin-right: 8px;
-      font-size: 16px; }
+      font-size: 16px;
+      height: 26px;
+      line-height: 26px;
+      width: 110px;
+      padding: 0; }
       .catalog__item .item-buy-panel .button--buy.active {
         color: #212121;
         background-image: url("../img/basket-red-icon.png");
         background-repeat: no-repeat;
         background-position: 3px center;
-        background-color: transparent; }
+        background-color: transparent;
+        padding-left: 30px; }
     .catalog__item .item-buy-panel .button--empty {
       font-size: 12px;
       padding-left: 5px;
       padding-right: 5px;
-      margin: 0; }
+      margin: 0;
+      width: 110px;
+      height: 26px;
+      line-height: 26px; }
     .catalog__item .item-buy-panel .item-setings {
-      margin-right: 8px; }
+      margin-right: 0px; }
 
 .catalog__items-footer {
   display: block;
@@ -5388,7 +5467,18 @@ span.feedback {
   .main-menu--footer {
     margin-top: -4px; }
   .contact-info {
-    margin-top: -4px; } }
+    margin-top: -4px; }
+  /*catalog*/
+  .filter-wrapper {
+    min-width: 247px;
+    width: 247px; }
+  .catalog__item {
+    margin-right: 0;
+    margin-left: 9px; }
+  .phones-block {
+    width: 48%; }
+  .work-time {
+    width: 52%; } }
 
 /*==========  Mobile First  ==========*/
 @media (min-width: 1800px) {

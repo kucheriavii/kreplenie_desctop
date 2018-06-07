@@ -253,6 +253,11 @@ a, a:hover, a:active, a:focus{
 	margin-left: 0px;
 	//max-height: 56px;
 	align-items: center;
+	position: relative;
+}
+.search-box .catalog__item-link:hover{
+	background-color: rgba(100,100,100,.1);
+	display: block;
 }
 .search-box__input{
 	width: 575px;
@@ -263,12 +268,14 @@ a, a:hover, a:active, a:focus{
 	margin-left: 40px;
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
-	text-indent: 24px;
-	padding-left: 8px;
+	text-indent: 30px;
+	/*padding-left: 8px;background-image: url("../img/search-icon.png");
+	background-repeat: no-repeat;
+	background-position: 8px 50%;*/
 	&::placeholder{
 		background-image: url("../img/search-icon.png");
 		background-repeat: no-repeat;
-		background-position: 0 50%;
+		background-position: 6px 50%;
 		font: 14px "OpenSans-SemiBold", sans-serif;
 		color: #c7c7cc;
 
@@ -286,6 +293,73 @@ a, a:hover, a:active, a:focus{
 	&:hover, &:active, &:focus{
 		outline: 0;
 		cursor: pointer;
+	}
+}
+
+.search-box__result{
+	display: none;
+	position: absolute;
+	top: 46px;
+	left: 40px;
+	background: #fff;
+	z-index: 2;
+	box-shadow: -1px 3px 6px rgba(88, 77, 77,0.8);
+	width: 400px;
+	.catalog__item{
+		height: 80px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid #eee;
+	}
+	.catalog__item-wrap{
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+	}
+	.catalog__item-img-wrap{
+		height: 100%;
+		width: 60px;
+		float: left;
+	}
+	.catalog__item-name{
+		font: 14px "OpenSans-Bold", sans-serif;
+		height: 16px;
+		line-height: 14px;
+		margin: 0;
+		width: 240px;
+		margin-left: 60px;
+		overflow: hidden;
+	}
+	.catalog__item-rating-wrapper{
+		display: none !important;
+	}
+	.catalog__item-price{
+		display: block;
+		.price--actual{
+			display: inline-block;
+		}
+		.price--unactual{
+			display: inline-block;
+		}
+	}
+	.item-buy-panel{
+		display: none;
+	}
+	.catalog__item-code{
+		display: block;
+		margin: 0;
+	}
+	.catalog__item-price {
+		margin-top: 2px;
+		height: 22px;
+	}
+	.show-more, .show-less{
+		display: block;
+		margin: 19px auto;
+		text-align: center;
+		clear: both;
+		width: 194px;
 	}
 }
 
@@ -1747,7 +1821,7 @@ span.feedback{
 	width: 250px;
 	height: 450px;
 	overflow: hidden;
-	margin-right: 5px;
+	margin-right: 6px;
 	&-img-wrap{
 		height: 300px;
 		position: relative;
@@ -1763,11 +1837,15 @@ span.feedback{
 	}
 	&-sticker{
 		display: block;
+		font: 12px "OpenSans-SemiBold";
+		margin-bottom: 1px;
+		padding: 1px;
 		.catalog__item-link{
 			border-radius: 5px;
 			margin-bottom: 2px;
 			padding-left: 5px;
 			padding-right: 5px;
+			color: #fff;
 		}
 	}
 	&-img{
@@ -1818,16 +1896,26 @@ span.feedback{
 	.item-buy-panel{
 		margin: 10px 0 0 0;
 		border: none;
+		height: 26px;
+		.item-setings, .item-likes{
+			height: 26px;
+			background-size: 16px;
+		}
 		.button--buy{
 			margin: 0;
 			margin-right: 8px;
 			font-size: 16px;
+			height: 26px;
+			line-height: 26px;
+			width: 110px;
+			padding: 0;
 			&.active{
 				color: #212121;
 				background-image: url("../img/basket-red-icon.png");
 				background-repeat: no-repeat;
 				background-position: 3px center;
 				background-color: transparent;
+				padding-left: 30px;
 			}
 		}
 		.button--empty{
@@ -1835,9 +1923,12 @@ span.feedback{
 			padding-left: 5px;
 			padding-right: 5px;
 			margin: 0;
+			width: 110px;
+			height: 26px;
+			line-height: 26px;
 		}
 		.item-setings{
-			margin-right: 8px;
+			margin-right: 0px;
 		}
 	}
 
