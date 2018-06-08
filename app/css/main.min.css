@@ -3204,8 +3204,8 @@ a, a:hover, a:active, a:focus {
   position: relative;
   width: 100%; }
 
-.drop-menu {
-  display: inline-block;
+.drop-menu-button {
+  position: relative;
   width: 255px;
   color: #ffffff;
   font: 20px/38px "OpenSans-Bold", sans-serif;
@@ -3213,38 +3213,116 @@ a, a:hover, a:active, a:focus {
   padding: 0;
   list-style-type: none;
   background-color: #f44336;
-  z-index: 2; }
+  z-index: 2;
+  border: none;
+  cursor: pointer; }
+  .drop-menu-button:active, .drop-menu-button:focus, .drop-menu-button:hover {
+    outline: none;
+    letter-spacing: 0.1px;
+    display: block;
+    background-color: #d32f2f; }
+  .drop-menu-button:after {
+    content: "";
+    display: inline-block;
+    background: url("../img/arrow-down-icon.png");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 10px;
+    margin-left: 18px; }
+
+.drop-menu {
+  position: absolute;
+  display: none;
+  color: #ffffff;
+  font: 20px/38px "OpenSans-Bold", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #fff;
+  z-index: 2;
+  top: 99%;
+  -webkit-box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.1), -2px 2px 2px rgba(30, 30, 30, 0.1);
+          box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.1), -2px 2px 2px rgba(30, 30, 30, 0.1); }
   .drop-menu.drop-menu--active {
     display: block; }
     .drop-menu.drop-menu--active li {
       display: block; }
-      .drop-menu.drop-menu--active li:hover {
-        background-color: #d32f2f; }
   .drop-menu__item {
     display: none;
+    font: 14px "OpenSans-SemiBold", sans-serif;
     width: 100%;
-    background-color: #f44336;
+    background-color: #fff;
     padding-left: 21px;
-    line-height: 56px; }
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #efeff4; }
+    .drop-menu__item .drop-menu__link {
+      width: 100%;
+      height: 100%;
+      color: #212121;
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      padding-right: 36px; }
+      .drop-menu__item .drop-menu__link:before {
+        content: "";
+        display: block;
+        background-image: url("../img/menu-link-icon.png");
+        height: 100%;
+        width: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-right: 21px;
+        -webkit-background-size: contain;
+                background-size: contain;
+        position: absolute;
+        left: 0; }
+      .drop-menu__item .drop-menu__link:after {
+        content: "";
+        display: block;
+        background-image: url("../img/menu-red-arrow-icon.png");
+        height: 100%;
+        width: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-background-size: 6px 12px;
+                background-size: 6px 12px;
+        position: absolute;
+        right: 9px;
+        top: 0; }
+    .drop-menu__item:hover {
+      background-color: #f9f9fe; }
     .drop-menu__item.active {
       letter-spacing: 0.1px;
       display: block;
       background-color: #d32f2f; }
-    .drop-menu__item:first-child:after {
-      content: "";
-      display: inline-block;
-      background: url("../img/arrow-down-icon.png");
-      width: 16px;
-      height: 10px;
-      margin-left: 18px; }
-    .drop-menu__item:nth-child(n+2) a {
-      display: block;
+  .drop-menu .drop-menu__submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    -webkit-box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.1);
+            box-shadow: 2px 2px 2px rgba(30, 30, 30, 0.1); }
+    .drop-menu .drop-menu__submenu-link {
       width: 100%;
-      height: 100%; }
-    .drop-menu__item a {
+      height: 100%;
+      color: #212121;
+      display: block;
       position: relative;
-      z-index: 3;
-      width: 100%; }
+      padding-left: 20px; }
+    .drop-menu .drop-menu__submenu-link:hover {
+      background-color: #f9f9fe; }
+    .drop-menu .drop-menu__submenu-item a {
+      display: block; }
+      .drop-menu .drop-menu__submenu-item a:before {
+        display: none; }
+  .drop-menu__item:hover > .drop-menu__submenu {
+    display: block; }
 
 .search-box {
   display: -webkit-box;
@@ -5123,6 +5201,7 @@ span.feedback {
   .jpg_download:before {
     background-image: url("../img/jpg-icon.png"); }
 
+/*popups*/
 .popup-wrapper {
   display: none; }
   .popup-wrapper.active {
@@ -5225,15 +5304,15 @@ span.feedback {
     font: 12px "OpenSans-Regular", sans-serif;
     margin-bottom: 22px; }
 
-.popup-wrapper .main-slider-popup {
+.popup-wrapper .main-slider__popup {
   width: 800px;
   height: auto !important;
   max-height: 90%; }
-  .popup-wrapper .main-slider-popup .popup-panel {
+  .popup-wrapper .main-slider__popup .popup-panel {
     width: 800px; }
-  .popup-wrapper .main-slider-popup .popup-name {
+  .popup-wrapper .main-slider__popup .popup-name {
     margin-left: -12px; }
-  .popup-wrapper .main-slider-popup .item-code {
+  .popup-wrapper .main-slider__popup .item-code {
     font-family: "OpenSans-Regular";
     font-size: 14px;
     background-color: #fff0b2;
@@ -5243,22 +5322,22 @@ span.feedback {
     padding: 0;
     margin: 0;
     margin-left: 16px; }
-  .popup-wrapper .main-slider-popup .popup-content {
+  .popup-wrapper .main-slider__popup .popup-content {
     width: 100%; }
-  .popup-wrapper .main-slider-popup .item-img {
+  .popup-wrapper .main-slider__popup .item-img {
     display: block;
     margin: 0 auto; }
-  .popup-wrapper .main-slider-popup .slick-arrow {
+  .popup-wrapper .main-slider__popup .slick-arrow {
     display: block; }
-    .popup-wrapper .main-slider-popup .slick-arrow:before {
+    .popup-wrapper .main-slider__popup .slick-arrow:before {
       content: "";
       width: 16px;
       height: 30px; }
-  .popup-wrapper .main-slider-popup .slick-next:before {
+  .popup-wrapper .main-slider__popup .slick-next:before {
     content: "";
     display: block;
     background-image: url("../img/right-arrow-icon.png"); }
-  .popup-wrapper .main-slider-popup .slick-prev:before {
+  .popup-wrapper .main-slider__popup .slick-prev:before {
     content: "";
     display: block;
     background-image: url("../img/left-arrow-icon.png"); }

@@ -198,8 +198,8 @@ a, a:hover, a:active, a:focus{
 	position: relative;
 	width: 100%;
 }
-.drop-menu{
-	display: inline-block;
+.drop-menu-button{
+	position: relative;
 	width: 255px;
 	color: $text-white;
 	font: 20px/38px "OpenSans-Bold", sans-serif;
@@ -208,44 +208,127 @@ a, a:hover, a:active, a:focus{
 	list-style-type: none;
 	background-color: $accent;
 	z-index: 2;
+	border: none;
+	cursor: pointer;
+	&:active, &:focus, &:hover{
+		outline: none;
+		letter-spacing: 0.1px;
+		display: block;
+		background-color: $active-accent;
+	}
+	&:after{
+		content: "";
+		display: inline-block;
+		background: url('../img/arrow-down-icon.png');
+		background-repeat: no-repeat;
+		width: 16px;
+		height: 10px;
+		margin-left: 18px;
+	}
+}
+.drop-menu{
+	position: absolute;
+	display: none;
+
+	color: $text-white;
+	font: 20px/38px "OpenSans-Bold", sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #fff;
+	z-index: 2;
+	top: 99%;
+	box-shadow: 2px 2px 2px rgba(30,30,30,.1), -2px 2px 2px rgba(30,30,30,.1);
 	&.drop-menu--active{
 		display: block;
 		& li{
 			display: block;
-			&:hover{
-				background-color: $active-accent;
-			}
 		}
 	}
 	&__item{
 		display: none;
+		font: 14px $font-semibold;
 		width: 100%;
-		background-color: $accent;
+		background-color: #fff;
 		padding-left: 21px;
-		line-height: 56px;
+		line-height: 50px;
+		height: 50px;
+		border-bottom: 1px solid #efeff4;
+		.drop-menu__link{
+			width: 100%;
+			height: 100%;
+			color: $text;
+			display: block;
+			position: relative;
+			padding-left: 36px;
+			padding-right: 36px;
+			&:before{
+				content: "";
+				display: block;
+				background-image: url("../img/menu-link-icon.png");
+				height: 100%;
+				width: 18px;
+				background-position: center;
+				background-repeat: no-repeat;
+				padding-right: 21px;
+				background-size: contain;
+				position: absolute;
+				left: 0;
+			}
+			&:after{
+				content: "";
+				display: block;
+				background-image: url("../img/menu-red-arrow-icon.png");
+				height: 100%;
+				width: 18px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 6px 12px;
+				position: absolute;
+				right: 9px;
+				top: 0;
+			}
+		}
+		&:hover{
+			background-color: #f9f9fe;
+		}
 		&.active{
 			letter-spacing: 0.1px;
 			display: block;
 			background-color: $active-accent;
 		}
-		&:first-child:after{
-			content: "";
-			display: inline-block;
-			background: url('../img/arrow-down-icon.png');
-			width: 16px;
-			height: 10px;
-			margin-left: 18px;
-		}
-		&:nth-child(n+2) a{
-			display: block;
+	}
+	.drop-menu__submenu{
+		display: none;
+		position: absolute;
+		left: 100%;
+		top: 0;
+		background: #fff;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		box-shadow: 2px 2px 2px rgba(30,30,30,.1);
+		&-link{
 			width: 100%;
 			height: 100%;
-		}
-		a{
+			color: $text;
+			display: block;
 			position: relative;
-			z-index: 3;
-			width: 100%;
+			padding-left: 20px;
 		}
+		&-link:hover{
+			background-color: #f9f9fe;
+		}
+		&-item a{
+			display: block;
+			&:before{
+				display: none;
+			}
+		}
+	}
+	&__item:hover>.drop-menu__submenu{
+		display: block;
 	}
 }
 .search-box{
@@ -2087,7 +2170,7 @@ span.feedback{
     background-image: url("../img/jpg-icon.png");
   }
 }
-
+/*popups*/
 .popup-wrapper{
 	display: none;
 	&.active{
@@ -2183,7 +2266,7 @@ span.feedback{
 		margin-bottom: 22px;
 	}
 }
-.popup-wrapper .main-slider-popup{
+.popup-wrapper .main-slider__popup{
 	width: 800px;
 	height: auto !important;
 	max-height: 90%;
@@ -2230,6 +2313,11 @@ span.feedback{
 		background-image: url("../img/left-arrow-icon.png");
 	}
 }
+.popup-wrapper .basked__popup{
+
+}
+
+
 .pagenav{
 	@extend .menu-ex;
 	&-item{
