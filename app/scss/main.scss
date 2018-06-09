@@ -2019,6 +2019,107 @@ span.feedback{
 	}
 
 }
+
+.catalog__item.active{
+	background-color: #f00;
+	position: relative;
+	overflow: visible;
+	height: auto;
+	.catalog__item-gallery-wrap{
+		position: absolute;
+		right: 100%;
+		width: 80px;
+		z-index: 2;
+		background-color: #f0f;
+		display: block;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+	}
+	.catalog__item-gallery{
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	.catalog__item-gallery-item{
+		display: block;
+		padding: 0;
+		margin: 0 auto;
+		width: 60px;
+	}
+	.catalog__item-gallery-img{
+		display: block;
+		object-fit: contain;
+		width: 60px;
+	}
+	.show-more{
+		font-size: 10px;
+		text-align: center;
+		width: 100%;
+		margin: 15px 0 0 0;
+	}
+	.item-catalog__item-detail{
+		position: absolute;
+		z-index: 9;
+		width: 100%;
+		background-color: #ffff00;
+		.item-counter-wrapper{
+			display: inline-flex;
+		}
+		.item-counter__button, .item-counter__input{
+			width: 36px;
+			height: 27px;
+		}
+		.item-catalog__detail-delivery{
+			font-size: 12px;
+			color: $accent;
+			line-height: 12px;
+			text-align: left;
+		}
+		.item-counter{
+			margin-top: 5px;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		.item-catalog__detail-presents{
+			display: block;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+		.item-catalog__detail-presents-item{
+			display: flex;
+			align-items: flex-start;
+			margin: 0;
+			padding: 0;
+			font: 12px $font-semibold;
+		}
+		.item-catalog__detail-presents-icon{
+			display: inline-block;
+			margin-right: 10px;
+		}
+		.item-catalog__detail-characteristic{
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+		.item-catalog__detail-characteristic-option{
+			display: block;
+			padding: 0;
+			margin: 0;
+		}
+		.item-catalog__detail-parameter{
+			font: 12px "OpenSans-Bold", sans-serif;
+		}
+		.item-catalog__detail-value{
+			font: 12px "OpenSans-Regular", sans-serif;
+			color: #bdbdbd;
+		}
+	}
+}
 .catalog__items-footer{
 	display: block;
 	width: 287px;
