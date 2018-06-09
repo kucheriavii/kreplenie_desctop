@@ -5499,7 +5499,10 @@ span.feedback {
     margin-left: 16px;
     line-height: 35px;
     padding: 0;
-    text-align: center; }
+    text-align: center;
+    color: #fff; }
+  .popup-wrapper .basket__popup .basket__promocode-answer {
+    margin-left: 22px; }
   .popup-wrapper .basket__popup .basket__result-sum-wrap {
     padding: 20px 16px; }
   .popup-wrapper .basket__popup .basket__result-sum {
@@ -5617,6 +5620,12 @@ span.feedback {
 
 .bgc-green {
   background-color: #6bd519; }
+
+.red-text {
+  color: #f44336; }
+
+.blue-text {
+  color: #1e88e5; }
 
 .menu-ex, .header-buttons, .breadcrumbs, .item-main-menu, .feedback-item__photos, .other-categories__menu, .catalog__banners-list, .catalog__sort-panel, .pagenav {
   display: -webkit-box;

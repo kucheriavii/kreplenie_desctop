@@ -100,6 +100,7 @@ var setActive = function () {
   var catalogSortLink = $(".catalog__sort-link");
   var catalogItemButton = '.catalog__item .button--buy';
   var pagenav = '.pagenav-button';
+  var promoButton = $('basket__promocode-ok');
 
   headerButton.on('click', function(){
       headerButton.removeClass('active');
@@ -204,6 +205,10 @@ var setActive = function () {
   $(document).on('click', pagenav, function(e){
       $(pagenav).removeClass('active');
       $(e.target).addClass('active');
+  })
+
+  promoButton.on('click',function(e){
+      e.preventDefault();
   })
 };
 

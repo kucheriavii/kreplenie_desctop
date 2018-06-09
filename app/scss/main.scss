@@ -2449,6 +2449,10 @@ span.feedback{
 		line-height: 35px;
 		padding: 0;
 		text-align: center;
+		color: #fff;
+	}
+	.basket__promocode-answer{
+		margin-left: 22px;
 	}
 	.basket__result-sum-wrap{
 		padding: 20px 16px;
@@ -2575,6 +2579,12 @@ span.feedback{
 }
 .bgc-green{
 	background-color: #6bd519;
+}
+.red-text{
+	color: $accent;
+}
+.blue-text{
+	color: #1e88e5;
 }
 .menu-ex{
 	display: flex;
