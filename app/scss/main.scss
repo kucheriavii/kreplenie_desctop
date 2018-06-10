@@ -2032,6 +2032,7 @@ span.feedback{
 	position: relative;
 	overflow: visible;
 	height: 450px;
+	box-shadow: 3px 2px 7px 0px rgba(200, 200, 200, 0.5);
 	.catalog__item-gallery-wrap{
 		display: block;
 		position: absolute;
@@ -2073,7 +2074,7 @@ span.feedback{
 		width: 330px;
 		margin-left: -80px;
 		padding-left: 80px;
-		box-shadow: -3px 2px 7px 0px rgba(200, 200, 200, 0.5);
+		box-shadow: -3px 2px 7px 0px rgba(200, 200, 200, 0.5), 3px 2px 7px 0px rgba(200, 200, 200, 0.5);
 		.item-counter-wrapper{
 			display: inline-flex;
 		}
