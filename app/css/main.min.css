@@ -5052,21 +5052,30 @@ span.feedback {
     .catalog__item .item-buy-panel .item-setings {
       margin-right: 0px; }
 
+.catalog__item-gallery-wrap {
+  display: none;
+  background-color: #fff; }
+
+.item-catalog__item-detail {
+  display: none;
+  background-color: #fff; }
+
 .catalog__item.active {
-  background-color: #f00;
   position: relative;
   overflow: visible;
-  height: auto; }
+  height: 450px; }
   .catalog__item.active .catalog__item-gallery-wrap {
+    display: block;
     position: absolute;
     right: 100%;
     width: 80px;
-    z-index: 2;
-    background-color: #f0f;
-    display: block;
+    z-index: 10;
     padding: 0;
     margin: 0;
-    height: 100%; }
+    height: 450px;
+    overflow: hidden;
+    -webkit-box-shadow: -3px 2px 7px 0px rgba(200, 200, 200, 0.5);
+            box-shadow: -3px 2px 7px 0px rgba(200, 200, 200, 0.5); }
   .catalog__item.active .catalog__item-gallery {
     margin: 0;
     padding: 0;
@@ -5081,16 +5090,20 @@ span.feedback {
     -o-object-fit: contain;
        object-fit: contain;
     width: 60px; }
-  .catalog__item.active .show-more {
+  .catalog__item.active .show-more, .catalog__item.active .show-less {
     font-size: 10px;
     text-align: center;
     width: 100%;
     margin: 15px 0 0 0; }
   .catalog__item.active .item-catalog__item-detail {
+    z-index: 10;
+    display: block;
     position: absolute;
-    z-index: 9;
-    width: 100%;
-    background-color: #ffff00; }
+    width: 330px;
+    margin-left: -80px;
+    padding-left: 80px;
+    -webkit-box-shadow: -3px 2px 7px 0px rgba(200, 200, 200, 0.5);
+            box-shadow: -3px 2px 7px 0px rgba(200, 200, 200, 0.5); }
     .catalog__item.active .item-catalog__item-detail .item-counter-wrapper {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
@@ -5153,6 +5166,11 @@ span.feedback {
     .catalog__item.active .item-catalog__item-detail .item-catalog__detail-value {
       font: 12px "OpenSans-Regular", sans-serif;
       color: #bdbdbd; }
+    .catalog__item.active .item-catalog__item-detail .catalog__detail-all-char {
+      width: 230px;
+      text-align: center;
+      margin: 0 auto 20px auto;
+      display: block; }
 
 .catalog__items-footer {
   display: block;

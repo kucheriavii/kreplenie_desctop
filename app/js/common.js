@@ -33,6 +33,7 @@ $(function() {
     scroolBar();
     horizontalScrollItem();
     basketInit();
+    catalogItemDetail();
     popup();
 });
 
@@ -670,4 +671,51 @@ var basketInit = function(){
             $(e.target).parents('.catalog__item').remove();
         }
     })
-}
+};
+
+var catalogItemDetail = function(){
+    $(document).on('click','.catalog__item-img-wrap', function(e){
+        $('.catalog__item').removeClass('active');
+        $(e.target).parents('.catalog__item').addClass('active');
+        $(e.target).parents(".catalog__item").find('.item-catalog__detail-characteristic-option').slice(9).slideUp(100);
+
+        //var toolbarHeight = $('.item-catalog__item-detail').height()+$('.catalog__item.active').children('.catalog__item-wrap').height();
+        //$('.catalog__item-gallery-wrap').height(toolbarHeight);
+        $('.catalog__item.active').find('.catalog__item-gallery-item').slice(0,2).css('display','none');
+    });
+
+
+   // $('.catalog__item .item-catalog__detail-characteristic-option').slice(9).css('display','none');
+
+    $(document).on('click','.catalog__item-gallery-wrap .show-more', function(e){
+        e.preventDefault();
+        $(e.target).parents('.catalog__item').find('.catalog__item-gallery-item').slideDown(200);
+        $(e.target).text("Скрыть елементы").removeClass('show-more').addClass('show-less');
+    });
+
+    $(document).on('click','.catalog__item-gallery-wrap .show-less', function(e){
+        e.preventDefault();
+        $(e.target).parents('.catalog__item').find('.catalog__item-gallery-item').slice(0,2).slideUp(200);
+        $(e.target).text("Показать еще").removeClass('show-less').addClass('show-more');
+    });
+
+    $(document).on('click', '.catalog__item-gallery-img', function(e){
+        var galleryPicture = $(e.target).attr('src');
+        $(e.target).parents(".catalog__item").find('.catalog__item-img').attr('src',galleryPicture);
+    });
+    $(document).on('click', '.catalog__detail-all-char', function(e){
+        e.preventDefault();
+        $(e.target).parents(".catalog__item").find('.item-catalog__detail-characteristic-option').slideDown();
+        $(e.target).text('Скрыть характеристики').removeClass('item-catalog__detail-characteristic').addClass('item-catalog__detail-characteristic-less');
+        //var toolbarHeight = $('.item-catalog__item-detail').height()+$('.catalog__item.active').children('.catalog__item-wrap').height();
+        //$(e.target).parents(".catalog__item").find('.catalog__item-gallery-wrap').height(toolbarHeight);
+    });
+    $(document).on('click', '.item-catalog__detail-characteristic-less', function(e){
+        e.preventDefault();
+        $(e.target).parents(".catalog__item").find('.item-catalog__detail-characteristic-option').slice(9).slideUp(100);
+        $(e.target).text('Все характеристики и описания').removeClass('item-catalog__detail-characteristic-less').addClass('item-catalog__detail-characteristic');
+        //var toolbarHeight = $('.item-catalog__item-detail').height()+$('.catalog__item.active').children('.catalog__item-wrap').height();
+        //$(e.target).parents(".catalog__item").find('.catalog__item-gallery-wrap').height(toolbarHeight);
+    });
+
+};
