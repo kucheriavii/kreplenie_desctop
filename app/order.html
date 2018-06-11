@@ -366,14 +366,14 @@
                                     <div class="col-sm-24">
                                         <div class="order-user">
                                             <button class="new-user active"><span>Новый <br>покупатель</span></button>
-                                            <button class="regular-user"><span>Постоянный <br>покупатель</span></button>
+                                            <button class="register-user"><span>Постоянный <br>покупатель</span></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <form action="#">
-                            <div class="new-user-form user-form" style="display: block;">
+                        <form action="#" class="new-user-form-wrap">
+                            <div class="new-user-form user-form">
                                 <div class="basic-order">
                                     <div class="container">
                                         <div class="row">
@@ -455,6 +455,116 @@
                                                 <label class="info">
                                                     <span>Комментарий к заказу</span>
                                                     <textarea name="comment-order" id="nu-order-ta" cols="30" rows="5" class="ar-cmmt"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="do-no-call-me">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-24">
+                                                <div class="label-box">
+                                                    <label class="dtcl-lbl">
+                                                        <input type="checkbox" name="name">
+                                                        <span>Не перезванивайте, отправляйте
+                                                    я всё правильно указал</span>
+                                                    </label>
+                                                    <div class="infolabel clearfix">
+                                                        <img src="img/info-icon.png" alt="info">
+                                                        <span class="clearfix">Посылка будет отправлена без уточнения деталей от менеджера</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form action="#" class="register-user-form-wrap">
+                            <div class="register-user-form user-form">
+                                <div class="basic-order">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-24">
+                                                <input name="name" type="text" placeholder="John Dou*" required="">
+                                                <input name="name" type="text" placeholder="Телефон *" required="">
+                                                <input name="name" type="email" placeholder="Обязательное поле!" class="wrong" required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-order">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-24">
+                                                <p>Доставка</p>
+                                                <div class="detail-variant-order">
+                                                    <span class="show-variants">Выберите способ доставки</span>
+                                                    <ul class="variants-delivery">
+                                                        <li><label><input type="radio" name="vr-dlvr" value="1" checked="checked"><span>Самовывоз со склада Днепр</span></label></li>
+                                                        <li><label><input type="radio" name="vr-dlvr" value="2"><span>Новая Почта</span></label></li>
+                                                        <li><label><input type="radio" name="vr-dlvr" value="3"><span>Укрпочта</span></label></li>
+                                                    </ul>
+                                                </div>
+                                                <span class="info">
+                                                Стоимость доставки от 50 грн в зависимости <br>от веса и объёма товара
+                                            </span>
+                                                <input type="text" name="name" class="search" placeholder="Выбирите город">
+                                                <input type="text" name="name" class="search" placeholder="Выберите склад">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment-order">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-24">
+                                                <p>Оплата</p>
+                                                <ul class="payments-list">
+                                                    <li class="payment-method">
+                                                        <label class="payment-item">
+                                                            <input type="radio" name="payment-position">
+                                                            <span class="payment-position">
+                                                        Наложенный платёж
+                                                    </span>
+                                                            <span class="info">
+                                                        Дополнительно оплачивается 20 грн + 2% от стоимости заказа
+                                                    </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="payment-method">
+                                                        <label class="payment-item">
+                                                            <input type="radio" name="payment-position">
+                                                            <span class="payment-position">
+                                                        Предоплата на карту
+                                                    </span>
+                                                            <span class="info">
+                                                       Номер карты предоставим вам после согласования заказа
+                                                    </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="payment-method">
+                                                        <label class="payment-item">
+                                                            <input type="radio" name="payment-position">
+                                                            <span class="payment-position">
+                                                        Наличными
+                                                    </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comments-order">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-24">
+                                                <label class="info">
+                                                    <span>Комментарий к заказу</span>
+                                                    <textarea name="comment-order" id="nu-order-dd" cols="30" rows="5" class="ar-cmmt"></textarea>
                                                 </label>
                                             </div>
                                         </div>

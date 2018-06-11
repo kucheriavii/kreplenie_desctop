@@ -2219,7 +2219,7 @@ span.feedback{
 				}
 			}
 		}
-		.new-user-form, .regular-user-form{
+		.new-user-form, .register-user-form{
 			margin: 0;
 			padding: 20px 16px 0;
 			color: #212121;
@@ -2434,7 +2434,9 @@ span.feedback{
 
 
 		}
-
+		.register-user-form-wrap{
+			display: none;
+		}
 	}
 }
 .order-item{
