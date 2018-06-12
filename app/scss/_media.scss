@@ -98,6 +98,9 @@
   .search-box__result{
     width: 400px;
   }
+  .order-panel-wrap .new-user-form .do-no-call-me .infolabel, .order-panel-wrap .register-user-form .do-no-call-me .infolabel{
+    display: none;
+  }
 }
 
 // ≥1024px
@@ -280,7 +283,6 @@
   .catalog__item-wrap{
     position: relative;
   }
-
 }
 
 

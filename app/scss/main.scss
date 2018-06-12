@@ -494,6 +494,10 @@ a, a:hover, a:active, a:focus{
 	height: 50px;
 	align-items: center;
 	font: 14px "OpenSans-Regular", sans-serif;
+	&.not-hd{
+		width: 1366px;
+	}
+	margin: 0 auto !important;
 	&__item{
 		color: #bdbdbd;
 		margin-right: 24px;
@@ -2175,6 +2179,8 @@ span.feedback{
 .order-box{
 	display: block;
 	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
 }
 .order-box-wrap{
 	display: flex;
@@ -2183,7 +2189,7 @@ span.feedback{
 .order-panel{
 	&-wrap{
 		width: 100%;
-		padding: 0 16px;
+		padding: 0;
 		.order-header-section-text{
 			background-color: #eeeeee;
 			padding: 14px 0;
@@ -2398,16 +2404,27 @@ span.feedback{
 				input:checked+span{
 					background-image: url("../img/check.png");
 				}
-
+				.label-box{
+					display: inline-block;
+				}
+				.dtcl-lbl{
+					width: auto;
+					display: flex;
+					position: relative;
+				}
 				.infolabel{
 					padding-left: 40px;
 					margin-top: 10px;
-					width: 100%;
-					position: relative;
 					margin-bottom: 16px;
+					position: absolute;
+					right: -16px;
+					top: -3px;
 					img{
 						margin-right: 16px;
 						display: inline-block;
+						position: absolute;
+						left: 16px;
+						top: 0px;
 					}
 					span{
 						display: inline-block;
@@ -2538,16 +2555,22 @@ span.feedback{
 		padding: 0;
 		width: 60%;
 	}
+	.summary-order{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.about-order-result-text{
 		font-size: 18px;
 		display: block;
-		width: 100%;
+		width: auto;
 		text-align: center;
+		padding-right: 15px;
 	}
 	.product-actual-price {
 		display: block;
 		background: 0 0;
-		width: 100%;
+		width: auto;
 		text-align: center;
 		font-size: 20px;
 		margin-top: 15px;
