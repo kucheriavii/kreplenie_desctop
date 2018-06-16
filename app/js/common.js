@@ -675,7 +675,7 @@ var basketInit = function(){
 
 var catalogItemDetail = function(){
     //при наведении мыши открывать детальную инфу о товаре, и обрезать количество елементов галереи
-    $(document).on('mouseenter','.catalog__item-wrap', function(e){
+    $(document).on('mouseenter','.catalog__items-list .catalog__item-wrap', function(e){
         $('.catalog__item').removeClass('active');
         $(e.target).parents('.catalog__item').addClass('active');
         $(e.target).parents(".catalog__item").find('.item-catalog__detail-characteristic-option').slice(9).slideUp(100);

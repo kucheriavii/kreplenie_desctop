@@ -197,6 +197,9 @@ a, a:hover, a:active, a:focus{
 	height: 56px;
 	position: relative;
 	width: 100%;
+  .catalog__item.active{
+	height: auto;
+  }
 }
 .drop-menu-button{
 	position: relative;
