@@ -691,7 +691,10 @@ var catalogItemDetail = function(){
             $('.catalog__item').removeClass('active');
         }
     })*/
-    $(document).on('mouseenter','.filter-wrapper', function(e){
+    /*$(document).on('mouseenter','.filter-wrapper', function(e){
+        $('.catalog__item').removeClass('active');
+    });*/
+    $(document).on('mouseleave','.catalog__item', function(e){
         $('.catalog__item').removeClass('active');
     });
         // $('.catalog__item .item-catalog__detail-characteristic-option').slice(9).css('display','none');
