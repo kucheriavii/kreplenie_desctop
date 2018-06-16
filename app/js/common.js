@@ -181,8 +181,16 @@ var setActive = function () {
   });
 
   catalogSortLink.on('click', function(){
-      catalogSortLink.removeClass('active');
-      $(this).addClass('active');
+      if($(this).hasClass('active')){
+          if($(this).hasClass('asc')){
+              $(this).removeClass('asc').addClass('desc');
+          } else if ($(this).hasClass('desc')){
+              $(this).removeClass('desc').addClass('asc');
+          }
+      } else{
+          catalogSortLink.removeClass('active');
+          $(this).addClass('active asc');
+      }
   });
 
   $(document).on('click', catalogItemButton, function(e){

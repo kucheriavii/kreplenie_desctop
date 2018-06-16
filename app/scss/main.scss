@@ -547,9 +547,9 @@ a, a:hover, a:active, a:focus{
 		  margin-top: 5px;
 		  width: 90px;
 		  text-align: center;
+		  margin-right: 20px;
 	  }
 	  h1{
-		  padding-left: 20px;
 		  font: 24px $font-semibold;
     }
   }
@@ -1898,7 +1898,10 @@ span.feedback{
 		}
 		&.active{
 			color: #212121;
-			&:after{
+			&.desc:after{
+				background: url("../img/sort-arrow-icon-up.png");
+			}
+		  &.asc:after{
 				background: url("../img/sort-arrow-icon.png");
 			}
 		}
@@ -2611,7 +2614,7 @@ span.feedback{
 
 /***footer***/
 
-.empty{
+.empty-footer{
 	height: 200px;
 }
 .footer {
@@ -2622,8 +2625,12 @@ span.feedback{
 	padding-top: 30px;
 	font-family: $font-semibold;
 }
-.button--mobile-version{
+.button.button--mobile-version{
 	//margin-top: 30px;
+  	display: inline-block;
+  &:hover, &:active{
+	color: #fff;
+  }
 	&:before{
 		background-image: url("../img/cell-icon.png");
 		width: 12px;
