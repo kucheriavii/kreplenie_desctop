@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
 
 <head>
 
@@ -11,39 +11,826 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
-	
+
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
-<header>
+<div class="wrapper">
+    <header>
+        <!--top menu-->
+        <div class="bgc-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-18 col-sm-18">
+                        <ul class="main-menu">
+                            <li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+                            <li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+                            <li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
+                            <li class="main-menu__item"><a href="#" class="main-menu__link delivery-and-payment__link">Доставка и оплата</a></li>
+                            <li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
+                            <li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <ul class="main-menu--right">
+                            <li class="main-menu__item--right"><a href="#" class="main-menu__link">Вход</a></li>
+                            <li class="main-menu__item--right"><a href="#" class="main-menu__link">Регистрация</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--logo & contacts-->
+        <div class="logo-and-contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-11">
+                        <div class="logo">
+                            <img src="img/logo-lg.png" alt="kreplenie-tv">
+                        </div>
+                    </div>
+                    <div class="col-lg-18 col-sm-13">
+                        <div class="contact-info">
+                            <ul class="phones-block">
+                                <li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
+                                <li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
+                                <li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+                            </ul>
+
+                            <p class="work-time">Пн – Пт: 9:00–18:00, Сб: 8:00–12:00 Воскресенье: выходной
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--header-menu-->
+        <div class="header-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="header-menu__wrapper">
+                        <button class="drop-menu-button active">Каталог товаров</button>
+                        <ul class="drop-menu">
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Крепления для телевизора</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="#" class="drop-menu__submenu-link">17-29 дюймов и мониторов</a>
+                                        <a href="#" class="drop-menu__submenu-link">30-40 дюймов</a>
+                                        <a href="#" class="drop-menu__submenu-link">42 дюйма и больше</a>
+                                        <a href="#" class="drop-menu__submenu-link">Потолочные крепления</a>
+                                        <a href="#" class="drop-menu__submenu-link">Т2 цифровое телевидение</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Т2 цифровое телевидение</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="" class="drop-menu__submenu-link">lorem</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Полки под телевизор</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Крепления для проекторов</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Экраны для проекторов</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Крепления для колонок</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="drop-menu__item"><a href="#" class="drop-menu__link">Тумбы под телевизор</a>
+                                <ul class="drop-menu__submenu">
+                                    <li class="drop-menu__submenu-item">
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                        <a href="" class="drop-menu__submenu-link">submenu link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="search-box">
+                            <input class="search-box__input" type="text" name="search-kreplenie" placeholder="Поиск товара">
+                            <button class="search-box-button">Найти</button>
+                            <div class="search-box__result">
+                                <div class="search-box__result-box">
+                                    <a href="#" class="catalog__item-link"><div class="catalog__item">
+                                        <div class="catalog__item-wrap">
+                                            <div class="catalog__item-img-wrap">
+                                                <img src="img/item-catalog-img1.jpg" alt="item img" class="catalog__item-img">
+                                            </div>
+                                            <h3 class="catalog__item-name">iTech LCD522-2 dark grey metall</h3>
+                                            <span class="catalog__item-code">45881</span>
+                                            <div class="catalog__item-rating-wrapper">
+                                                <ul class="rating rating-catalog rating-off">
+                                                    <li class="rating__star active"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                </ul>
+                                                <span class="catalog__item-feedback-counter">4 отзыва</span>
+                                            </div>
+                                            <div class="price catalog__item-price">
+                                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                                <div class="price--unactual">320<span class="currency">грн</span></div>
+                                            </div>
+                                            <!--<div class="item-buy-panel">-->
+                                                <!--<button class="button button&#45;&#45;buy">Купить</button>-->
+                                                <!--<button class="item-setings"></button>-->
+                                                <!--<button class="item-likes"></button>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div></a>
+                                    <a href="#" class="catalog__item-link"><div class="catalog__item">
+                                        <div class="catalog__item-wrap">
+                                            <div class="catalog__item-img-wrap">
+                                                <img src="img/item-catalog-img4.jpg" alt="item img" class="catalog__item-img">
+                                                <ul class="catalog__item-stickers-wrap">
+                                                </ul>
+                                            </div>
+                                            <h3 class="catalog__item-name">iTech LCD522-2<br>dark grey metall</h3>
+                                            <span class="catalog__item-code">45881</span>
+                                            <div class="catalog__item-rating-wrapper">
+                                                <ul class="rating rating-catalog rating-off">
+                                                    <li class="rating__star active"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                </ul>
+                                                <span class="catalog__item-feedback-counter">4 отзыва</span>
+                                            </div>
+                                            <div class="price catalog__item-price">
+                                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                                <div class="price--unactual">320<span class="currency">грн</span></div>
+                                            </div>
+                                            <!--<div class="item-buy-panel">-->
+                                                <!--<button class="button button&#45;&#45;buy">Купить</button>-->
+                                                <!--<button class="item-setings"></button>-->
+                                                <!--<button class="item-likes"></button>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div></a>
+                                    <a href="#" class="catalog__item-link"><div class="catalog__item">
+                                        <div class="catalog__item-wrap">
+                                            <div class="catalog__item-img-wrap">
+                                                <img src="img/item-catalog-img1.jpg" alt="item img" class="catalog__item-img">
+                                            </div>
+                                            <h3 class="catalog__item-name">iTech LCD522-2 dark grey metall</h3>
+                                            <span class="catalog__item-code">45881</span>
+                                            <div class="catalog__item-rating-wrapper">
+                                                <ul class="rating rating-catalog rating-off">
+                                                    <li class="rating__star active"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                </ul>
+                                                <span class="catalog__item-feedback-counter">4 отзыва</span>
+                                            </div>
+                                            <div class="price catalog__item-price">
+                                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                                <div class="price--unactual">320<span class="currency">грн</span></div>
+                                            </div>
+                                            <!--<div class="item-buy-panel">-->
+                                                <!--<button class="button button&#45;&#45;buy">Купить</button>-->
+                                                <!--<button class="item-setings"></button>-->
+                                                <!--<button class="item-likes"></button>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div></a>
+                                    <a href="#" class="catalog__item-link"><div class="catalog__item">
+                                        <div class="catalog__item-wrap">
+                                            <div class="catalog__item-img-wrap">
+                                                <img src="img/item-catalog-img1.jpg" alt="item img" class="catalog__item-img">
+                                            </div>
+                                            <h3 class="catalog__item-name">iTech LCD522-2 dark grey metall</h3>
+                                            <span class="catalog__item-code">45881</span>
+                                            <div class="catalog__item-rating-wrapper">
+                                                <ul class="rating rating-catalog rating-off">
+                                                    <li class="rating__star active"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                </ul>
+                                                <span class="catalog__item-feedback-counter">4 отзыва</span>
+                                            </div>
+                                            <div class="price catalog__item-price">
+                                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                                <div class="price--unactual">320<span class="currency">грн</span></div>
+                                            </div>
+                                            <!--<div class="item-buy-panel">-->
+                                                <!--<button class="button button&#45;&#45;buy">Купить</button>-->
+                                                <!--<button class="item-setings"></button>-->
+                                                <!--<button class="item-likes"></button>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div></a>
+                                    <a href="#" class="catalog__item-link"><div class="catalog__item">
+                                        <div class="catalog__item-wrap">
+                                            <div class="catalog__item-img-wrap">
+                                                <img src="img/item-catalog-img1.jpg" alt="item img" class="catalog__item-img">
+                                            </div>
+                                            <h3 class="catalog__item-name">iTech LCD522-2 dark grey metall</h3>
+                                            <span class="catalog__item-code">45881</span>
+                                            <div class="catalog__item-rating-wrapper">
+                                                <ul class="rating rating-catalog rating-off">
+                                                    <li class="rating__star active"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                    <li class="rating__star"></li>
+                                                </ul>
+                                                <span class="catalog__item-feedback-counter">4 отзыва</span>
+                                            </div>
+                                            <div class="price catalog__item-price">
+                                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                                <div class="price--unactual">320<span class="currency">грн</span></div>
+                                            </div>
+                                            <!--<div class="item-buy-panel">-->
+                                                <!--<button class="button button&#45;&#45;buy">Купить</button>-->
+                                                <!--<button class="item-setings"></button>-->
+                                                <!--<button class="item-likes"></button>-->
+                                            <!--</div>-->
+                                        </div>
+                                    </div></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="header-buttons">
+                            <li class="header-buttons__item promo-button"><a href="#" class="header-buttons__link">Акции!<span class="counter"></span></a></li>
+                            <li class="header-buttons__item settings-button"><a href="#" class="header-buttons__link"><img
+                                    src="img/settings-icon.png" alt=""><span class="counter">12</span></a></li>
+                            <li class="header-buttons__item likes-button"><a href="#" class="header-buttons__link"><img
+                                    src="img/heards-icon.png" alt=""><span class="counter">1</span></a></li>
+                            <li class="header-buttons__item basket-button"><a href="#" class="header-buttons__link"><img
+                                    src="img/basket-icon.png" alt=""><span class="counter">1212</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Breadcrumbs-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="com-lg-24 col-sm-24">-->
+                    <!--<ul class="breadcrumbs">-->
+                        <!--<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>-->
+                        <!--<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог</a></li>-->
+                        <!--<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Крепления для ТВ и мониторов</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </header>
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
-				<ul class="top-mnu">
-					<li><a href="#">О компании</a></li>
-					<li><a href="#">Контакты</a></li>
-					<li><a href="#">Гарантии</a></li>
-					<li><a href="#">Доставка и оплата</a></li>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Партнёрам</a></li>
-				</ul>
+			<div class="col-md-24">
+				<div class="slider-main">
+					<div class="slider-main__box">
+						<img src="img/slider1.jpg" alt="slider img">
+						<h2 class="slider-main__slide-text">Lorem ipsum dolor.</h2>
+					</div>
+					<div class="slider-main__box">
+						<img src="img/slider2.jpg" alt="slider img">
+						<h2 class="slider-main__slide-text">Lorem ipsum dolor.</h2>
+					</div>
+					<div class="slider-main__box">
+						<img src="img/slider3.jpg" alt="slider img">
+						<h2 class="slider-main__slide-text">Lorem ipsum dolor.</h2>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</header>
+    <!--Other categories-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="other-categories">
+                    <h2 class="other-categories__header">Популярные товары</h2>
+                    <ul class="other-categories__menu">
+                        <li class="other-categories__menu-item active">
+                            <img src="img/others-cat-item1.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Потолочные<br>крепление<br>для телевизоров</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item2.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Настольные<br>крепления<br>для мониторов</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item3.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Т2<br>телевидение</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item4.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Полки<br>для тюнера</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item5.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Кабель<br>и переходники</span>
+                        </li>
+                        <li class="other-categories__menu-item">
+                            <img src="img/others-cat-item6.jpg" alt="other categories" class="other-categories__menu-image">
+                            <span class="other-categories__menu-text">Аксессуары</span>
+                        </li>
+                    </ul>
+                    <div class="other-categories__item-box active">
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="other-categories__item">
+                            <a href="#">
+                                <div class="other-categories__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="other-categories__item-like"></span>
+                                </div>
+                                <h3 class="other-categories__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
 
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                    <div class="other-categories__item-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem enim fuga illum inventore magni odit provident, vel. Adipisci corporis cumque eius exercitationem, facilis fugiat laboriosam nostrum possimus praesentium quidem!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--U have look this-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-24">
+                <div class="history-items">
+                    <h2 class="other-categories__header">Вы уже смотрели</h2>
+                    <div class="history-items__item-box">
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                        <a href="">
+                            <div class="history-items__item-photo">
+                                <img src="img/the-same-item-1.png" alt="other-item">
+                                <span class="history-items__item-like"></span>
+                            </div>
+                            <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                            <div class="price">
+                                <div class="price--actual">290<span class="currency">грн</span></div>
+                                <div class="price--unactual">100<span class="currency">грн</span></div>
+                            </div>
+                        </a>
+                    </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="history-items__item">
+                            <a href="">
+                                <div class="history-items__item-photo">
+                                    <img src="img/the-same-item-1.png" alt="other-item">
+                                    <span class="history-items__item-like"></span>
+                                </div>
+                                <h3 class="history-items__item-name">iTech<br>CELB-22NL W</h3>
+                                <div class="price">
+                                    <div class="price--actual">290<span class="currency">грн</span></div>
+                                    <div class="price--unactual">100<span class="currency">грн</span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="empty-footer"></div>
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-sm-7">
+				<a href="#" class="button button--mobile-version">Мобильная версия сайта</a>
+			</div>
+			<div class="col-md-6 col-sm-7">
+				<ul class="main-menu--footer">
+					<li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Контакты</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Гарантии</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Доставка и оплата</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Услуги</a></li>
+					<li class="main-menu__item"><a href="#" class="main-menu__link">Партнёрам</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8 col-sm-10">
+				<div class="contact-info justify-content-end">
+					<ul class="phones-block phones--footer">
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(050) 458-81-42</a></li>
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(073) 458-81-42</a></li>
+						<li class="phones-block__item"><a href="#" class="phones-block__link">(067) 830-00-77</a></li>
+					</ul>
+
+					<p class="work-time">Пн – Пт: 9:00–18:00<br> Сб: 8:00–12:00<br> Воскресенье: выходной
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="footer-copyright">
+				<div class="copyright">2018 © Kreplenie-TV.com.ua</div>
+				<div class="our-logo">
+					<a href="#"><img src="img/akweb-logo.png" alt="AKWEB development"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<!--popups-->
+<div class="popup-wrapper">
+    <div class="popup delivery-and-payment__popup">
+        <div class="popup-panel">
+            <h2 class="popup-name">Доставка и оплата</h2>
+            <a href="" class="popup-close"></a>
+        </div>
+
+        <div class="popup-content">
+            <h3 class="delvery-popup-h">Доставка и оплата по Украине:</h3>
+            <span>Бесплатная доставка по Украине для заказов от 500 грн!</span>
+            <p>важаемые покупатели, если сумма вашего заказа составит 500 грн. и выше, и оплата товара будет осуществлена по предоплате, доставку товара на ваш склад "НовойПочты" или "Укрпочты" мы оплатим за вас.</p>
+            <p>Также, мы оплатим доставку по Украине при отправке наложенным платежом (оплата товара при получении на вашем складе), но в таком случае, стоимость возврата денег на наш склад оплачиваете вы, что составит 20 грн. +2% от стоимости товара.</p>
+            <p>Доставка по Украине заказов до 500 грн. Если сумма вашего заказа не превышает 500 грн. доставка осуществляется только транспортными компаниями "НоваяПочта" и “УкрПочта”.</p>
+            <h3 class="address-popup-h">Адресная доставка:</h3>
+            <p>После оформления заказа, с вами свяжется наш менеджер и уточнит удобное для вас время доставки.<br>
+                Стоимость доставки – от 50 грн.</p>
+            <h3 class="y-popup-h">Самовывоз со склада</h3>
+            <p>г. Днипро, ул. Авиационная д. 39. Обязательно согласуйте время своего визита и наличие товара с нашим менеджером.</p>
+
+            <p>
+                Предоплату товара вы можете произвести на карточку ПриватБанка<br>
+                №4731 2171 1083 4932, получатель Оспанов А.Р.<br>
+                ФОП Оспанов А.Р. ЄДРПОУ: 2912700657<br>
+                Види діяльності: 47.91<br>
+                Роздрібна торгівля, що здійснюється фірмами поштового замовлення або через мережу Інтернет в Україні.<br>
+                Оплата товара производится только в национальной валюте Украины!
+            </p>
+        </div>
+    </div>
+
+    <div class="popup login__popup">
+        <div class="popup-panel">
+            <h2 class="popup-name">Логин</h2>
+            <a href="" class="popup-close"></a>
+        </div>
+
+        <div class="popup-content">
+			<div class="social-auth">
+				<span class="auth-info">Вход через соцсети</span>
+				<div class="auth-buttons">
+					<a href="#" class="button auth-link auth-google">
+						<div class="img-box">
+							<img src="img/google-auth.png" alt="google">
+						</div>
+						<span class="text">Google</span>
+					</a>
+					<a href="#" class="button auth-link auth-fb">
+						<div class="img-box">
+							<img src="img/facebook-auth.png" alt="facebook">
+						</div>
+						<span class="text">Facebook</span>
+					</a>
+				</div>
+				<span class="info">или</span>
+				<div class="auth-form">
+					<form action="#">
+						<label class="auth-email-lbl">
+							<input type="text" name="email" class="auth-email" placeholder="Email" required="">
+						</label>
+						<label class="auth-pass-lbl">
+							<input type="password" name="password" class="auth-password" placeholder="Пароль" required="">
+						</label>
+
+						<div class="password-block">
+							<a href="#" class="rem-pass">Напомнить пароль</a>
+						</div>
+
+						<div class="backed-buttons clearfix">
+							<a href="#" class="button">Войти</a>
+							<a href="#" class="button">Регистрация</a>
+						</div>
+					</form>
+				</div>
+			</div>
+        </div>
+    </div>
+
+	<div class="popup main-slider__popup">
+		<div class="popup-panel">
+			<h2 class="popup-name">Доставка и оплата</h2>
+			<a href="" class="popup-close"></a>
+		</div>
+
+		<div class="popup-content">
+
+		</div>
+	</div>
+</div>
+
+<!--/popups-->
 	<script src="js/scripts.min.js"></script>
 
 </body>
