@@ -20,11 +20,11 @@ $(function() {
     slickGoTo('.slides-scroll__item','.item__slider-wrap');
     rating();
     item_counter();
-    showMore();
+    showMore(); //управление кнопками показать еще
     orderPage(); //Функция ответственая за страницу заказа
-    catalogFilter();
-    scroolBar();
-    horizontalScrollItem();
+    catalogFilter(); //работа с фильтром (catalog.html)
+    scroolBar(); //вешаем скроллы
+    horizontalScrollItem(); //в зависимости от ширины объекта добавляет панель кнопок для прокрутки скролла
     basketInit();
     catalogItemDetail(); //показывать детальную информацию о товаре в catalog.html
     popup(); //обработка попапов
@@ -262,6 +262,8 @@ var rating = function() {
     });
 };
 var scroolBar = function(){
+
+    //вешаем скроллеры на соответствующие елементы
     $(".slides-scroll").mCustomScrollbar({
         scrollInertia: 0,
         scrollButtons: {enable: true},
@@ -312,6 +314,7 @@ var scroolBar = function(){
 };
 /*******************counter**************************/
 var mainSlider = function(){
+    //Slider
     $('.slider-main').slick({
         adaptiveHeight: true,
         dots: true,
@@ -420,7 +423,7 @@ var showMore = function(){
 };
 
 var horizontalScrollItem = function (e) {
-    //вешаем кастомную прокрутку (скроллбар)
+    //функия создает кнопки для скроллеров и управление кнопками для скроллеров
     $("<span class='other-categories-left-scroll'></span>").insertBefore($(".other-categories__item-box"));
     $("<span class='other-categories-right-scroll'></span>").insertAfter($(".other-categories__item-box"));
 
@@ -665,12 +668,14 @@ var filterPrice = function(){
 };
 
 var catalogFilter = function(e){
+    //кнопка очистки фильтра
   $(document).on('click', '.filter-result__button-refresh', function(e){
       e.preventDefault();
       $(this).parents('.filter-options').find('input:checked').prop('checked', false);
   });
-
+    //кнопка выбора фильтра
     $(document).on('click', '.filter-result__button-ok', function(e){
+        e.preventDefault();
         var selectedInputs = $(this).parents('.filter-options').find('input:checked').parents('.filter-options__label');
         var selectedText = [];
         $('.filter-selected-params__block .filter-selected-params__label').remove();
