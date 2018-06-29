@@ -497,6 +497,7 @@ a, a:hover, a:active, a:focus{
 	height: 50px;
 	align-items: center;
 	font: 14px "OpenSans-Regular", sans-serif;
+  	cursor: initial !important;
 	&.not-hd{
 		width: 1366px;
 	}
@@ -1977,6 +1978,7 @@ span.feedback{
 	&-img-wrap{
 		height: 300px;
 		position: relative;
+	  	margin-right: 8px;
 	}
 	&-stickers-wrap{
 		position: absolute;
