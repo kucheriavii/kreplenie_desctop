@@ -1779,8 +1779,8 @@ span.feedback{
     width: 100%;
     align-items: center;
     display: flex;
-    height: 24px;
-    line-height: 24px;
+    min-height: 24px;
+    line-height: 18px;
     font-size: 14px;
     cursor: pointer;
     input[type='checkbox']{
@@ -1857,8 +1857,8 @@ span.feedback{
 		width: 100%;
 		align-items: center;
 		display: flex;
-		height: 24px;
-		line-height: 24px;
+		min-height: 24px;
+		line-height: 18px;
 		font-size: 14px;
         cursor: pointer;
 		input[type='checkbox']{
