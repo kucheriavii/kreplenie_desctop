@@ -3441,6 +3441,72 @@ span.feedback{
 .popup{
 	animation: opacha 1s;
 }
+/******fixes css*********/
+.catalog__item.active .item-catalog__item-detail .item-catalog__detail-characteristic-option{
+  line-height: 1em;
+  padding-bottom: 10px;
+}
 
+.logo-and-contacts{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.main-menu{
+  padding-left: 10px;
+}
+.main-menu--right{
+  padding-right: 10px;
+}
+.breadcrumbs{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.page-header h1{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.catalog-wrapper{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.other-categories__header{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.order-panel-wrap .register-user-form .do-no-call-me .label-box{
+  position: relative;
+}
+.basked-result{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.about-order .parameter-of-order{
+  text-align: left;
+}
+.order-item-wrap{
+  padding-right: 10px;
+}
+.item-main-menu__block{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.slides-scroll__item{
+  margin-bottom: 10px;
+  &:last-child{
+	margin-bottom: 0;
+  }
+  .active{
+	border: 1px solid $accent;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .catalog__item{
+	width: 240px;
+  }
+}
 
 @import "media"; // Always at the end
