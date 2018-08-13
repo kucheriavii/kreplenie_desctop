@@ -28,6 +28,13 @@ $(function() {
     basketInit();
     catalogItemDetail(); //показывать детальную информацию о товаре в catalog.html
     popup(); //обработка попапов
+
+   /* $(".slides-scroll__item").click(function(){
+        $('.slider__item:visible .slider__item-link').click()
+
+    })*/
+
+
 });
 
 var searchHeader = function () {
@@ -214,8 +221,10 @@ var setActive = function () {
 };
 
 var slickGoTo = function(el, slider) {
-    $(el).parent().on('click', el , function (e) {
+    $(el).parent().on('mouseenter', el , function (e) {
         var n=$(this).parent().children(el).index(this);
+        $(el).removeClass('active');
+        $(this).addClass('active');
         //$(slider).slick('slickGoTo',n,true)
         var actualSlider = ($(e.target).parents('.item-slider').find('.item__slider-wrap'));
         actualSlider.slick('slickGoTo',n,true)
@@ -573,6 +582,12 @@ var mainSliderPopup = function(){
     $('.slider__item-link').click(function (e) {
         e.preventDefault();
         n = $(this).parents('.slider__item').index('.slider__item')-1;
+        $('.main-slider__popup').addClass('active').parents('.popup-wrapper').addClass('active');
+        $('.item__slider-wrap').slick('slickGoTo',n,true)
+    })
+
+    $('.item-slider').eq(0).find(".slides-scroll__item").on('click', function(){
+        n = $(this).index('.slides-scroll__item');
         $('.main-slider__popup').addClass('active').parents('.popup-wrapper').addClass('active');
         $('.item__slider-wrap').slick('slickGoTo',n,true)
     })

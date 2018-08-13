@@ -3499,8 +3499,13 @@ span.feedback{
   &:last-child{
 	margin-bottom: 0;
   }
-  .active{
+  &.active{
 	border: 1px solid $accent;
+  }
+}
+.item__slider-wrap{
+  .slick-next, .slick-prev{
+	//display: none !important;
   }
 }
 @media screen and (max-width: 1366px) {
