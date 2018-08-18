@@ -6688,6 +6688,10 @@ span.feedback {
           transform: rotate(180deg);
   background-position: 50%; }
 
+.catalog__item.active .catalog__item-gallery-item {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
 @media screen and (max-width: 1366px) {
   .catalog__item {
     width: 240px; } }
