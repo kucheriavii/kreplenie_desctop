@@ -6602,6 +6602,15 @@ span.feedback {
           animation: opacha 1s; }
 
 /******fixes css*********/
+.catalog__item-gallery {
+  height: 100%;
+  overflow: hidden; }
+  .catalog__item-gallery .mCSB_inside > .mCSB_container {
+    margin: 0; }
+
+.catalog__item-gallery-img.bordered {
+  border: 1px solid #f44336; }
+
 .catalog__item.active .item-catalog__item-detail .item-catalog__detail-characteristic-option {
   line-height: 1em;
   padding-bottom: 10px; }
@@ -6659,6 +6668,25 @@ span.feedback {
     margin-bottom: 0; }
   .slides-scroll__item.active {
     border: 1px solid #f44336; }
+
+.catalog__item .accessories-items-left-scroll {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-image: url("../img/arroq-up-icon.png");
+  background-position: 50%; }
+
+.catalog__item .accessories-items-right-scroll {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-image: url("../img/arroq-up-icon.png");
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-position: 50%; }
 
 @media screen and (max-width: 1366px) {
   .catalog__item {
