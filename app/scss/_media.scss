@@ -105,6 +105,11 @@
 
 // ≥1024px
 @include media-breakpoint-down(xs) {
+  .mobile-12{
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
   .main-menu{
     display: block;
     height: auto;
@@ -309,7 +314,7 @@
 @include media-breakpoint-up(xl) {
   .bgc-grey, .logo-and-contacts, .header-menu{
     .container{
-      max-width: 1366px;
+     /* max-width: 1366px;*/
       margin-left: auto;
       margin-right: auto;
     }

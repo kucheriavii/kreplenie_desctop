@@ -271,7 +271,11 @@ var rating = function() {
     });
 };
 var scroolBar = function(){
-
+    $('.order-form__items').mCustomScrollbar({
+        scrollInertia: 0,
+        scrollbarPosition: "outside",
+        advanced:{ autoExpandHorizontalScroll:true }
+    });
     //вешаем скроллеры на соответствующие елементы
     $(".slides-scroll").mCustomScrollbar({
         scrollInertia: 0,
